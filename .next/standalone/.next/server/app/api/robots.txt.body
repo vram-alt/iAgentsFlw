@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Disallow all crawling in development/staging
