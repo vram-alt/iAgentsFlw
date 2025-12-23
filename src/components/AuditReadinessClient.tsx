@@ -278,8 +278,6 @@ const AuditReadinessClient = () => {
         </div>
       </section>
 
-      {/* Footer */}
-
       {/* Contact Form Modal */}
       <ContactFormModal 
         isOpen={contactModalOpen} 

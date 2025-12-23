@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import SmartImage from '../SmartImage';
 
 const Header = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
@@ -21,14 +21,15 @@ const Header = () => {
         <div className="flex items-center justify-between h-18 py-2">
           {/* Logo */}
           <Link href="/" className="hover:scale-105 transition-transform flex items-center">
-            <SmartImage 
+            <Image 
               src="/images/logo.webp" 
               alt="AgentFlow Logo" 
-              className="h-12 w-auto object-contain"
-              priority={true}
               width={200}
               height={48}
-              objectFit="contain"
+              className="h-12 w-auto object-contain"
+              priority
+              quality={90}
+              loading="eager"
             />
           </Link>
 
@@ -93,7 +94,7 @@ const Header = () => {
                       <div className="font-medium text-white">iComply</div>
                       <div className="text-sm text-gray-400">Intelligent compliance automation</div>
                     </Link>
-                    <Link href="/tools/agentflow-old" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
+                    {/* <Link href="/tools/agentflow-old" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
                       <div className="font-medium text-white">AgentFlow Old</div>
                       <div className="text-sm text-gray-400">Production-safe AI agents for enterprise</div>
                     </Link>
@@ -104,7 +105,7 @@ const Header = () => {
                     <Link href="/tools/iprivacyhub" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
                       <div className="font-medium text-white">iPrivacyHub</div>
                       <div className="text-sm text-gray-400">AI enterprise privacy platform</div>
-                    </Link>
+                    </Link> */}
                   </motion.div>
                 )}
               </AnimatePresence>
