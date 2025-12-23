@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="hover:scale-105 transition-transform flex items-center">
             <Image 
-              src="/images/logo.webp" 
+              src="https://iagentsflow.netlify.app/images/logo.webp" 
               alt="AgentFlow Logo" 
               width={200}
               height={48}
