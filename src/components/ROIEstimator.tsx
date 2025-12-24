@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calculator, Mail, ArrowRight, Play, Pause, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -29,33 +29,7 @@ const ROIEstimator = () => {
   const [isLiveMode, setIsLiveMode] = useState(true);
   const [userControlMode, setUserControlMode] = useState(false);
 
-  // Live simulation effect
-  useEffect(() => {
-    if (!isLiveMode) return;
-
-    const interval = setInterval(() => {
-      // Simulate realistic changes in enterprise environment
-      const variations = {
-        numApps: Math.floor(Math.random() * 20) + 15, // 15-35 apps
-        monthlyQueries: Math.floor(Math.random() * 200000) + 50000, // 50K-250K queries
-        avgCostPerApp: Math.floor(Math.random() * 800) + 200, // $200-1000
-        complianceTier: ['low', 'medium', 'high'][Math.floor(Math.random() * 3)]
-      };
-
-      setInputs(variations);
-      
-      // Auto-calculate ROI with new values
-      autoCalculateROI(variations);
-    }, 3000); // Update every 3 seconds
-
-    // Initial calculation
-    autoCalculateROI(inputs);
-    setShowResults(true);
-
-    return () => clearInterval(interval);
-  }, [isLiveMode]);
-
-  const autoCalculateROI = (currentInputs: typeof inputs) => {
+  const autoCalculateROI = useCallback((currentInputs: typeof inputs) => {
     const { numApps, monthlyQueries, avgCostPerApp, complianceTier } = currentInputs;
     
     // Savings calculation based on industry benchmarks
@@ -96,7 +70,33 @@ const ROIEstimator = () => {
     };
     
     setResults(calculatedResults);
-  };
+  }, []);
+
+  // Live simulation effect
+  useEffect(() => {
+    if (!isLiveMode) return;
+
+    const interval = setInterval(() => {
+      // Simulate realistic changes in enterprise environment
+      const variations = {
+        numApps: Math.floor(Math.random() * 20) + 15, // 15-35 apps
+        monthlyQueries: Math.floor(Math.random() * 200000) + 50000, // 50K-250K queries
+        avgCostPerApp: Math.floor(Math.random() * 800) + 200, // $200-1000
+        complianceTier: ['low', 'medium', 'high'][Math.floor(Math.random() * 3)]
+      };
+
+      setInputs(variations);
+      
+      // Auto-calculate ROI with new values
+      autoCalculateROI(variations);
+    }, 3000); // Update every 3 seconds
+
+    // Initial calculation
+    autoCalculateROI(inputs);
+    setShowResults(true);
+
+    return () => clearInterval(interval);
+  }, [isLiveMode, autoCalculateROI, inputs]);
 
   const calculateROI = () => {
     autoCalculateROI(inputs);

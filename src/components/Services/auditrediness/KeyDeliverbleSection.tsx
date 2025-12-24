@@ -10,7 +10,7 @@ import { CheckCircle} from 'lucide-react';
 
 
 
-const keyDeliverbleSection =()=>{
+const KeyDeliverbleSection =()=>{
      const [contactModalOpen, setContactModalOpen] = useState(false);
   
     return (
@@ -98,4 +98,4 @@ const keyDeliverbleSection =()=>{
         </>
     )
 }
-export default keyDeliverbleSection
+export default KeyDeliverbleSection

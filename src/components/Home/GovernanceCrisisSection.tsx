@@ -16,7 +16,7 @@ const GovernanceCrisisSection = () => {
                         The <span className="text-gradient">AI Governance Crisis</span> is Here
                     </h2>
                     <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-                        While enterprises rush to deploy AI agents, they're creating ungoverned
+                        While enterprises rush to deploy AI agents, they&apos;re creating ungoverned
                         ecosystems that put compliance, costs, and customer trust at risk.
                     </p>
                 </motion.div>

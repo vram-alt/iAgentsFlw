@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { FileText, Target, Shield, CheckCircle, Users, Database, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -10,7 +10,7 @@ const DemoFlowVisualizer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   
-  const processFlow = [
+  const processFlow = useMemo(() => [
     {
       name: 'Request Intake',
       icon: Users,
@@ -112,7 +112,7 @@ const DemoFlowVisualizer = () => {
         automations: ['Encryption protocols', 'Delivery tracking', 'Access logging']
       }
     }
-  ];
+  ], []);
 
   useEffect(() => {
     if (isPlaying) {

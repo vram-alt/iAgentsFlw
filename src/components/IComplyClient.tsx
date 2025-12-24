@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence, useScroll, useTransform, useInView } from 'framer-motion';
 import ContactFormModal from '@/components/ContactFormModal';
@@ -336,7 +336,7 @@ const DemoFlowVisualizer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   
-  const processFlow = [
+  const processFlow = useMemo(() => [
     {
       name: 'Request Intake',
       icon: Users,
@@ -438,7 +438,7 @@ const DemoFlowVisualizer = () => {
         automations: ['Encryption protocols', 'Delivery tracking', 'Access logging']
       }
     }
-  ];
+  ], []);
 
   useEffect(() => {
     if (isPlaying) {

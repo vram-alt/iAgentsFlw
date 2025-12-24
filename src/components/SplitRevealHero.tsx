@@ -23,7 +23,7 @@ const SplitRevealHero = () => {
       setCurrentHeadline((prev) => (prev + 1) % headlines.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [headlines.length]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isDragging) return;

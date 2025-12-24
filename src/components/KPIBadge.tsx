@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 interface KPIBadgeProps {
@@ -23,26 +23,7 @@ const KPIBadge = ({
   const [displayValue, setDisplayValue] = useState(animateValue ? '0' : value);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    if (!animateValue) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true);
-          animateNumber();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    const element = document.getElementById(`kpi-${label.replace(/\s+/g, '-')}`);
-    if (element) observer.observe(element);
-
-    return () => observer.disconnect();
-  }, [isVisible, animateValue]);
-
-  const animateNumber = () => {
+  const animateNumber = useCallback(() => {
     const numericValue = parseFloat(value.replace(/[^0-9.-]/g, ''));
     const isDecimal = value.includes('.');
     const duration = 2000; // 2 seconds
@@ -63,7 +44,26 @@ const KPIBadge = ({
         setDisplayValue(formatted);
       }
     }, duration / steps);
-  };
+  }, [value]);
+
+  useEffect(() => {
+    if (!animateValue) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+          animateNumber();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    const element = document.getElementById(`kpi-${label.replace(/\s+/g, '-')}`);
+    if (element) observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [isVisible, animateValue, animateNumber, label]);
 
   const getTrendColor = () => {
     switch (trend) {
