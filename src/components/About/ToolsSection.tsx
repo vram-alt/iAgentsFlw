@@ -20,24 +20,24 @@ const ToolsSection = () => {
             link: '/tools/icomply',
             features: ['Automated Compliance', 'Real-time Monitoring', 'Audit Trail', 'Regulatory Updates']
         },
-        {
-            name: 'AgentsFlow',
-            description: 'Production-safe AI agents for enterprise with built-in governance, compliance, and security controls.',
-            link: '/tools/AgentsFlow',
-            features: ['AI Agent Orchestration', 'Safety Guardrails', 'Workflow Automation', 'Enterprise Integration']
-        },
-        {
-            name: 'DocX.AI',
-            description: 'Enterprise document intelligence platform powered by AI for automated processing and analysis.',
-            link: '/tools/docx',
-            features: ['Document Processing', 'Smart Extraction', 'Compliance Checking', 'Version Control']
-        },
-        {
-            name: 'iPrivacyHub',
-            description: 'AI enterprise privacy platform for comprehensive data protection and privacy compliance management.',
-            link: '/tools/iprivacyhub',
-            features: ['DSAR Automation', 'Consent Management', 'PII Detection', 'Multi-Framework Support']
-        }
+        // {
+        //     name: 'AgentsFlow',
+        //     description: 'Production-safe AI agents for enterprise with built-in governance, compliance, and security controls.',
+        //     link: '/tools/AgentsFlow',
+        //     features: ['AI Agent Orchestration', 'Safety Guardrails', 'Workflow Automation', 'Enterprise Integration']
+        // },
+        // {
+        //     name: 'DocX.AI',
+        //     description: 'Enterprise document intelligence platform powered by AI for automated processing and analysis.',
+        //     link: '/tools/docx',
+        //     features: ['Document Processing', 'Smart Extraction', 'Compliance Checking', 'Version Control']
+        // },
+        // {
+        //     name: 'iPrivacyHub',
+        //     description: 'AI enterprise privacy platform for comprehensive data protection and privacy compliance management.',
+        //     link: '/tools/iprivacyhub',
+        //     features: ['DSAR Automation', 'Consent Management', 'PII Detection', 'Multi-Framework Support']
+        // }
     ];
     return (
         <section className="py-20 bg-gradient-to-br from-[#0A0F1A] via-[#0F172A] to-[#0A0F1A]">
