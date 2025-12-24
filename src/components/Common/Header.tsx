@@ -12,6 +12,11 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   
+  // Return null if URL contains 'studio' (Sanity Studio)
+  if (pathname?.includes('studio')) {
+    return null;
+  }
+  
   const isAgentsFlowRoute = pathname?.includes('/tools/AgentsFlow');
 
   return (

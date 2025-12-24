@@ -1,0 +1,284 @@
+/* Custom styles for Sanity Studio - Dark heading colors */
+
+/* Global heading styles for Sanity Studio - MUST BE FIRST */
+/* Target all heading elements in Sanity Studio - Comprehensive selectors */
+[data-sanity] h1,
+[data-sanity] h2,
+[data-sanity] h3,
+[data-sanity] h4,
+[data-sanity] h5,
+[data-sanity] h6 {
+  color: #1a1a1a !important;
+}
+
+/* PORTABLE TEXT EDITOR - Most specific targeting */
+/* Target PortableText editor container directly */
+[data-sanity] [class*="PortableText"] h1,
+[data-sanity] [class*="PortableText"] h2,
+[data-sanity] [class*="PortableText"] h3,
+[data-sanity] [class*="PortableText"] h4,
+[data-sanity] [class*="PortableText"] h5,
+[data-sanity] [class*="PortableText"] h6,
+[data-sanity] [class*="portableText"] h1,
+[data-sanity] [class*="portableText"] h2,
+[data-sanity] [class*="portableText"] h3,
+[data-sanity] [class*="portableText"] h4,
+[data-sanity] [class*="portableText"] h5,
+[data-sanity] [class*="portableText"] h6,
+[data-sanity] [class*="pt-editor"] h1,
+[data-sanity] [class*="pt-editor"] h2,
+[data-sanity] [class*="pt-editor"] h3,
+[data-sanity] [class*="pt-editor"] h4,
+[data-sanity] [class*="pt-editor"] h5,
+[data-sanity] [class*="pt-editor"] h6 {
+  color: #1a1a1a !important;
+}
+
+/* Target Slate editor specifically (PortableText uses Slate) */
+[data-sanity] [contenteditable="true"] h1,
+[data-sanity] [contenteditable="true"] h2,
+[data-sanity] [contenteditable="true"] h3,
+[data-sanity] [contenteditable="true"] h4,
+[data-sanity] [contenteditable="true"] h5,
+[data-sanity] [contenteditable="true"] h6,
+[data-sanity] [contenteditable] h1,
+[data-sanity] [contenteditable] h2,
+[data-sanity] [contenteditable] h3,
+[data-sanity] [contenteditable] h4,
+[data-sanity] [contenteditable] h5,
+[data-sanity] [contenteditable] h6 {
+  color: #1a1a1a !important;
+}
+
+/* Root level targeting for Sanity Studio container */
+body > div[data-sanity] h1,
+body > div[data-sanity] h2,
+body > div[data-sanity] h3,
+body > div[data-sanity] h4,
+body > div[data-sanity] h5,
+body > div[data-sanity] h6 {
+  color: #1a1a1a !important;
+}
+
+/* Target headings in Portable Text editor content - SLATE SPECIFIC */
+[data-sanity] [data-slate-editor] h1,
+[data-sanity] [data-slate-editor] h2,
+[data-sanity] [data-slate-editor] h3,
+[data-sanity] [data-slate-editor] h4,
+[data-sanity] [data-slate-editor] h5,
+[data-sanity] [data-slate-editor] h6,
+[data-sanity] [data-slate-node="element"] h1,
+[data-sanity] [data-slate-node="element"] h2,
+[data-sanity] [data-slate-node="element"] h3,
+[data-sanity] [data-slate-node="element"] h4,
+[data-sanity] [data-slate-node="element"] h5,
+[data-sanity] [data-slate-node="element"] h6,
+[data-sanity] [data-slate-node] h1,
+[data-sanity] [data-slate-node] h2,
+[data-sanity] [data-slate-node] h3,
+[data-sanity] [data-slate-node] h4,
+[data-sanity] [data-slate-node] h5,
+[data-sanity] [data-slate-node] h6,
+[data-sanity] [class*="slate"] h1,
+[data-sanity] [class*="slate"] h2,
+[data-sanity] [class*="slate"] h3,
+[data-sanity] [class*="slate"] h4,
+[data-sanity] [class*="slate"] h5,
+[data-sanity] [class*="slate"] h6,
+[data-sanity] [class*="Slate"] h1,
+[data-sanity] [class*="Slate"] h2,
+[data-sanity] [class*="Slate"] h3,
+[data-sanity] [class*="Slate"] h4,
+[data-sanity] [class*="Slate"] h5,
+[data-sanity] [class*="Slate"] h6 {
+  color: #1a1a1a !important;
+}
+
+/* Target headings in form fields and input areas */
+[data-sanity] [class*="FormField"] h1,
+[data-sanity] [class*="FormField"] h2,
+[data-sanity] [class*="FormField"] h3,
+[data-sanity] [class*="FormField"] h4,
+[data-sanity] [class*="FormField"] h5,
+[data-sanity] [class*="FormField"] h6,
+[data-sanity] [class*="Input"] h1,
+[data-sanity] [class*="Input"] h2,
+[data-sanity] [class*="Input"] h3,
+[data-sanity] [class*="Input"] h4,
+[data-sanity] [class*="Input"] h5,
+[data-sanity] [class*="Input"] h6 {
+  color: #1a1a1a !important;
+}
+
+/* Target headings in editor containers */
+[data-sanity] [class*="editor"] h1,
+[data-sanity] [class*="editor"] h2,
+[data-sanity] [class*="editor"] h3,
+[data-sanity] [class*="editor"] h4,
+[data-sanity] [class*="editor"] h5,
+[data-sanity] [class*="editor"] h6,
+[data-sanity] [class*="Editor"] h1,
+[data-sanity] [class*="Editor"] h2,
+[data-sanity] [class*="Editor"] h3,
+[data-sanity] [class*="Editor"] h4,
+[data-sanity] [class*="Editor"] h5,
+[data-sanity] [class*="Editor"] h6 {
+  color: #1a1a1a !important;
+}
+
+/* Target headings in block content */
+[data-sanity] [class*="block"] h1,
+[data-sanity] [class*="block"] h2,
+[data-sanity] [class*="block"] h3,
+[data-sanity] [class*="block"] h4,
+[data-sanity] [class*="block"] h5,
+[data-sanity] [class*="block"] h6,
+[data-sanity] [class*="Block"] h1,
+[data-sanity] [class*="Block"] h2,
+[data-sanity] [class*="Block"] h3,
+[data-sanity] [class*="Block"] h4,
+[data-sanity] [class*="Block"] h5,
+[data-sanity] [class*="Block"] h6 {
+  color: #1a1a1a !important;
+}
+
+/* Target headings with style attributes */
+[data-sanity] [style*="h1"] h1,
+[data-sanity] [style*="h2"] h2,
+[data-sanity] [style*="h3"] h3,
+[data-sanity] [style*="h4"] h4,
+[data-sanity] [style*="h5"] h5,
+[data-sanity] [style*="h6"] h6 {
+  color: #1a1a1a !important;
+}
+
+/* Universal selector for any heading in Sanity Studio */
+[data-sanity] *[class*="heading"] h1,
+[data-sanity] *[class*="heading"] h2,
+[data-sanity] *[class*="heading"] h3,
+[data-sanity] *[class*="heading"] h4,
+[data-sanity] *[class*="heading"] h5,
+[data-sanity] *[class*="heading"] h6 {
+  color: #1a1a1a !important;
+}
+
+/* ULTRA AGGRESSIVE: Target headings by style attribute values */
+[data-sanity] [style*="h1"] h1,
+[data-sanity] [style*="h2"] h2,
+[data-sanity] [style*="h3"] h3,
+[data-sanity] [style*="h4"] h4,
+[data-sanity] [style*="h5"] h5,
+[data-sanity] [style*="h6"] h6,
+[data-sanity] [data-style="h1"],
+[data-sanity] [data-style="h2"],
+[data-sanity] [data-style="h3"],
+[data-sanity] [data-style="h4"],
+[data-sanity] [data-style="h5"],
+[data-sanity] [data-style="h6"] {
+  color: #1a1a1a !important;
+}
+
+/* Fallback: Target all headings regardless of context - HIGHEST SPECIFICITY */
+body [data-sanity] h1,
+body [data-sanity] h2,
+body [data-sanity] h3,
+body [data-sanity] h4,
+body [data-sanity] h5,
+body [data-sanity] h6,
+html body [data-sanity] h1,
+html body [data-sanity] h2,
+html body [data-sanity] h3,
+html body [data-sanity] h4,
+html body [data-sanity] h5,
+html body [data-sanity] h6 {
+  color: #1a1a1a !important;
+}
+
+/* NUCLEAR OPTION: Target every heading element inside Sanity Studio regardless of nesting */
+[data-sanity] * h1,
+[data-sanity] * h2,
+[data-sanity] * h3,
+[data-sanity] * h4,
+[data-sanity] * h5,
+[data-sanity] * h6 {
+  color: #1a1a1a !important;
+}
+
+/* LIGHT MODE SPECIFIC OVERRIDES - Higher specificity */
+body:not([data-scheme="dark"]) [data-sanity] h1,
+body:not([data-scheme="dark"]) [data-sanity] h2,
+body:not([data-scheme="dark"]) [data-sanity] h3,
+body:not([data-scheme="dark"]) [data-sanity] h4,
+body:not([data-scheme="dark"]) [data-sanity] h5,
+body:not([data-scheme="dark"]) [data-sanity] h6,
+[data-scheme="light"] [data-sanity] h1,
+[data-scheme="light"] [data-sanity] h2,
+[data-scheme="light"] [data-sanity] h3,
+[data-scheme="light"] [data-sanity] h4,
+[data-scheme="light"] [data-sanity] h5,
+[data-scheme="light"] [data-sanity] h6 {
+  color: #1a1a1a !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+}
+
+/* Light mode PortableText editor */
+body:not([data-scheme="dark"]) [data-sanity] [data-slate-editor] h1,
+body:not([data-scheme="dark"]) [data-sanity] [data-slate-editor] h2,
+body:not([data-scheme="dark"]) [data-sanity] [data-slate-editor] h3,
+body:not([data-scheme="dark"]) [data-sanity] [data-slate-editor] h4,
+body:not([data-scheme="dark"]) [data-sanity] [data-slate-editor] h5,
+body:not([data-scheme="dark"]) [data-sanity] [data-slate-editor] h6,
+[data-scheme="light"] [data-sanity] [data-slate-editor] h1,
+[data-scheme="light"] [data-sanity] [data-slate-editor] h2,
+[data-scheme="light"] [data-sanity] [data-slate-editor] h3,
+[data-scheme="light"] [data-sanity] [data-slate-editor] h4,
+[data-scheme="light"] [data-sanity] [data-slate-editor] h5,
+[data-scheme="light"] [data-sanity] [data-slate-editor] h6,
+body:not([data-scheme="dark"]) [data-sanity] [contenteditable] h1,
+body:not([data-scheme="dark"]) [data-sanity] [contenteditable] h2,
+body:not([data-scheme="dark"]) [data-sanity] [contenteditable] h3,
+body:not([data-scheme="dark"]) [data-sanity] [contenteditable] h4,
+body:not([data-scheme="dark"]) [data-sanity] [contenteditable] h5,
+body:not([data-scheme="dark"]) [data-sanity] [contenteditable] h6 {
+  color: #1a1a1a !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+}
+
+/* FINAL OVERRIDE: Direct element targeting with maximum specificity */
+/* This should catch all headings including those with inline styles */
+h1[style],
+h2[style],
+h3[style],
+h4[style],
+h5[style],
+h6[style] {
+  color: #1a1a1a !important;
+}
+
+/* Target headings in any div that contains "block" or "content" */
+[data-sanity] div[class*="block"] h1,
+[data-sanity] div[class*="block"] h2,
+[data-sanity] div[class*="block"] h3,
+[data-sanity] div[class*="block"] h4,
+[data-sanity] div[class*="block"] h5,
+[data-sanity] div[class*="block"] h6,
+[data-sanity] div[class*="content"] h1,
+[data-sanity] div[class*="content"] h2,
+[data-sanity] div[class*="content"] h3,
+[data-sanity] div[class*="content"] h4,
+[data-sanity] div[class*="content"] h5,
+[data-sanity] div[class*="content"] h6 {
+  color: #1a1a1a !important;
+}
+
+/* Last resort: target all headings inside any element with data-sanity */
+[data-sanity] h1,
+[data-sanity] h2,
+[data-sanity] h3,
+[data-sanity] h4,
+[data-sanity] h5,
+[data-sanity] h6 {
+  color: #1a1a1a !important;
+  -webkit-text-fill-color: #1a1a1a !important;
+}
+

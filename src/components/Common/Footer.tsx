@@ -1,6 +1,16 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const Footer = () => {
+  const pathname = usePathname();
+  
+  // Return null if URL contains 'studio' (Sanity Studio)
+  if (pathname?.includes('studio')) {
+    return null;
+  }
+  
   return (
     <footer className="bg-card/20 py-12 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
