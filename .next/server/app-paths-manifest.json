@@ -1,6 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/tools/icomply/page": "app/tools/icomply/page.js",
-  "/about/page": "app/about/page.js",
-  "/services/page": "app/services/page.js"
-}

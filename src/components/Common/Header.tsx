@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="hover:scale-105 transition-transform flex items-center">
             <Image 
-              src="https://iagentsflow.com/images/logo.webp" 
+              src="/images/logo.webp" 
               alt="AgentsFlow Logo" 
               width={200}
               height={48}
