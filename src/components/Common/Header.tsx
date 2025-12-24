@@ -13,7 +13,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   
-  const isAppsBeeRoute = pathname?.includes('/tools/appsbee');
+  const isAgentsFlowRoute = pathname?.includes('/tools/AgentsFlow');
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 !bg-[#161f32]/95 backdrop-blur-md border-b border-white/10 shadow-xl">
@@ -22,8 +22,8 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="hover:scale-105 transition-transform flex items-center">
             <Image 
-              src="https://iagentsflow.netlify.app/images/logo.webp" 
-              alt="AgentFlow Logo" 
+              src="https://iagentsflow.com/images/logo.webp" 
+              alt="AgentsFlow Logo" 
               width={200}
               height={48}
               className="h-12 w-auto object-contain"
@@ -86,16 +86,16 @@ const Header = () => {
                     exit={{ opacity: 0, y: 10 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-[#0F172A]/95 backdrop-blur-md border-2 border-white/20 rounded-xl p-4 shadow-2xl z-50"
                   >
-                    <Link href="/tools/agentflow" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
-                      <div className="font-medium text-white">AgentFlow</div>
+                    <Link href="/tools/agentsflow" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
+                      <div className="font-medium text-white">AgentsFlow</div>
                       <div className="text-sm text-gray-400">Enterprise Apps&AI Governance and management software</div>
                     </Link>
                     <Link href="/tools/icomply" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
                       <div className="font-medium text-white">iComply</div>
                       <div className="text-sm text-gray-400">Intelligent compliance automation</div>
                     </Link>
-                    {/* <Link href="/tools/agentflow-old" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
-                      <div className="font-medium text-white">AgentFlow Old</div>
+                    {/* <Link href="/tools/AgentsFlow-old" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
+                      <div className="font-medium text-white">AgentsFlow Old</div>
                       <div className="text-sm text-gray-400">Production-safe AI agents for enterprise</div>
                     </Link>
                     <Link href="/tools/docx" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
@@ -163,14 +163,14 @@ const Header = () => {
                 </div>
                 <div className="space-y-2">
                   <div className="text-gray-400 text-sm font-medium">Tools</div>
-                  <Link href="/tools/appsbee" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
-                    AppsBee
+                  <Link href="/tools/AgentsFlow" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
+                    AgentsFlow
                   </Link>
                   <Link href="/tools/icomply" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
                     iComply
                   </Link>
-                  <Link href="/tools/agentflow" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
-                    AgentFlow
+                  <Link href="/tools/AgentsFlow" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
+                    AgentsFlow
                   </Link>
                   <Link href="/tools/docx" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
                     DocX.AI

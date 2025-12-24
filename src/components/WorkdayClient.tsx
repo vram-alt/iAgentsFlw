@@ -18,7 +18,7 @@ const WorkdayClient = () => {
       <div className="bg-[#0F172A]/30 border-b border-white/5 pt-20">
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
-            <Link href="/" className="hover:text-white">AgentFlow.ai</Link>
+            <Link href="/" className="hover:text-white">AgentsFlow.ai</Link>
             <span>/</span>
             <Link href="/platforms" className="hover:text-white">Platforms</Link>
             <span>/</span>
@@ -49,7 +49,7 @@ const WorkdayClient = () => {
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
-              Enhance Workday AI capabilities with comprehensive governance. AgentFlow ensures fair, compliant AI in HR, finance, and enterprise planning while protecting sensitive employee data.
+              Enhance Workday AI capabilities with comprehensive governance. AgentsFlow ensures fair, compliant AI in HR, finance, and enterprise planning while protecting sensitive employee data.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center pt-4">
@@ -222,7 +222,7 @@ const WorkdayClient = () => {
             <CardContent className="p-12 text-center">
               <h2 className="text-3xl font-bold mb-4">Govern Your Workday AI</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Schedule a demo to see how AgentFlow enhances Workday AI with comprehensive governance for HR and Finance.
+                Schedule a demo to see how AgentsFlow enhances Workday AI with comprehensive governance for HR and Finance.
               </p>
               <Button 
                 size="lg" 

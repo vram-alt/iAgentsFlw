@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import AuditReadinessClient from '@/components/AuditReadinessClient'
 import { getSiteUrl } from '@/lib/site-url'
+import AuditRediness from '@/components/Services/auditrediness'
 
 const siteUrl = getSiteUrl()
 
 export const metadata: Metadata = {
-  title: 'Audit Readiness - Prepare for Regulatory Audits | AgentFlow AI',
+  title: 'Audit Readiness - Prepare for Regulatory Audits | AgentsFlow AI',
   description: 'Prepare your organization for regulatory audits with comprehensive documentation, evidence collection, and expert guidance to ensure compliance confidence.',
   alternates: {
     canonical: `${siteUrl}/services/audit-readiness`,
   },
   openGraph: {
-    title: 'Audit Readiness - Prepare for Regulatory Audits | AgentFlow AI',
+    title: 'Audit Readiness - Prepare for Regulatory Audits | AgentsFlow AI',
     description: 'Prepare your organization for regulatory audits with comprehensive documentation, evidence collection, and expert guidance.',
     url: `${siteUrl}/services/audit-readiness`,
     type: 'website',
@@ -19,6 +20,6 @@ export const metadata: Metadata = {
 }
 
 export default function AuditReadinessPage() {
-  return <AuditReadinessClient />
+  return <AuditRediness />
 }
 

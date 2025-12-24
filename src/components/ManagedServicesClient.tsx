@@ -54,7 +54,7 @@ const ManagedServicesClient = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Shield, title: 'Policies & Guardrails', desc: 'AppsBee with HITL queues' },
+              { icon: Shield, title: 'Policies & Guardrails', desc: 'AgentsFlow with HITL queues' },
               { icon: GitBranch, title: 'Change Management', desc: 'Models/prompts/tools with approvals & canaries' },
               { icon: Monitor, title: 'Observability', desc: 'Latency/cost/usage + cost controls' },
               { icon: FileText, title: 'Privacy Ops', desc: 'DSAR, consent, RoPA & breach workflows (iComply)' },

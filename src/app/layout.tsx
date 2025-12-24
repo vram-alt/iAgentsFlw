@@ -23,14 +23,14 @@ const siteUrl = getSiteUrl()
 
 export const metadata: Metadata = {
   title: {
-    default: 'AgentFlow AI - AI Governance Platform',
-    template: '%s | AgentFlow AI',
+    default: 'AgentsFlow AI - AI Governance Platform',
+    template: '%s | AgentsFlow AI',
   },
   description: 'AI governance platform with Azure guardrails that strengthens compliance, reduces risk, protects data, and ensures secure and responsible AI operations.',
   keywords: ['AI governance', 'compliance', 'Azure guardrails', 'enterprise AI', 'AI compliance'],
-  authors: [{ name: 'AgentFlow AI' }],
-  creator: 'AgentFlow AI',
-  publisher: 'AgentFlow AI',
+  authors: [{ name: 'AgentsFlow AI' }],
+  creator: 'AgentsFlow AI',
+  publisher: 'AgentsFlow AI',
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: '/',
@@ -39,23 +39,23 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: 'AgentFlow AI',
-    title: 'AgentFlow AI - AI Governance Platform',
+    siteName: 'AgentsFlow AI',
+    title: 'AgentsFlow AI - AI Governance Platform',
     description: 'AI governance platform with Azure guardrails that strengthens compliance, reduces risk, protects data, and ensures secure and responsible AI operations.',
     images: [
       {
-        url: '/AgentFlow-logo.png',
+        url: '/AgentsFlow-logo.png',
         width: 1200,
         height: 630,
-        alt: 'AgentFlow AI',
+        alt: 'AgentsFlow AI',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AgentFlow AI - AI Governance Platform',
+    title: 'AgentsFlow AI - AI Governance Platform',
     description: 'AI governance platform with Azure guardrails that strengthens compliance, reduces risk, protects data, and ensures secure and responsible AI operations.',
-    images: ['/AgentFlow-logo.png'],
+    images: ['/AgentsFlow-logo.png'],
   },
   robots: {
     index: true,

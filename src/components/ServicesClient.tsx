@@ -1581,7 +1581,7 @@ const ServicesClient = () => {
           {/* What We Run */}
           <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: Shield, title: 'Policies & Guardrails', desc: 'AppsBee with HITL queues' },
+              { icon: Shield, title: 'Policies & Guardrails', desc: 'AgentsFlow with HITL queues' },
               { icon: GitBranch, title: 'Change Management', desc: 'Models/prompts/tools with approvals & canaries' },
               { icon: Monitor, title: 'Observability', desc: 'Latency/cost/usage + cost controls' },
               { icon: FileText, title: 'Privacy Ops', desc: 'DSAR, consent, RoPA & breach workflows (iComply)' },
@@ -1653,7 +1653,7 @@ const ServicesClient = () => {
                 <div className="mx-auto mb-2 flex h-16 w-16 items-center justify-center rounded-full bg-[#F47F21]/10">
                   <Bot className="h-8 w-8 text-[#F47F21]" />
                 </div>
-                <div className="font-bold">AppsBee</div>
+                <div className="font-bold">AgentsFlow</div>
                 <div className="text-sm text-gray-400">Enforces</div>
               </div>
               <ArrowRight className="h-6 w-6 text-gray-400" />
@@ -1674,12 +1674,12 @@ const ServicesClient = () => {
               </div>
             </div>
             <p className="mb-6 text-gray-300">
-              AppsBee enforces guardrails and change control; iComply proves it with assessments, records, and reports. 
+              AgentsFlow enforces guardrails and change control; iComply proves it with assessments, records, and reports. 
               Adopt either — or both for a closed loop.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button variant="outline" className="border-[#F47F21] text-[#F47F21] hover:bg-[#F47F21] hover:text-white">
-                Explore AppsBee
+                Explore AgentsFlow
               </Button>
               <Button variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white">
                 Explore iComply

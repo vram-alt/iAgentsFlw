@@ -1,3 +1,16 @@
 {
-  "/services/assessment/page": "app/services/assessment/page.js"
+  "/platforms/salesforce/page": "app/platforms/salesforce/page.js",
+  "/platforms/servicenow/page": "app/platforms/servicenow/page.js",
+  "/platforms/workday/page": "app/platforms/workday/page.js",
+  "/managed-services/guardrail-monitoring/page": "app/managed-services/guardrail-monitoring/page.js",
+  "/managed-services/data-governance/page": "app/managed-services/data-governance/page.js",
+  "/managed-services/operational-checklist/page": "app/managed-services/operational-checklist/page.js",
+  "/managed-services/continuous-monitoring/page": "app/managed-services/continuous-monitoring/page.js",
+  "/managed-services/spend-management/page": "app/managed-services/spend-management/page.js",
+  "/managed-services/change-management/page": "app/managed-services/change-management/page.js",
+  "/managed-services/audit-readiness/page": "app/managed-services/audit-readiness/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/partners/page": "app/partners/page.js",
+  "/resources/state-of-enterprise/page": "app/resources/state-of-enterprise/page.js",
+  "/services/page": "app/services/page.js"
 }

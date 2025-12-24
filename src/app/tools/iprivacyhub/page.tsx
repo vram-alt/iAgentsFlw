@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import IPrivacyHubClient from '@/components/IPrivacyHubClient'
 import { getSiteUrl } from '@/lib/site-url'
+import IPrivacyHub from '@/components/Tools/IPrivacyHub'
 
 const siteUrl = getSiteUrl()
 
 export const metadata: Metadata = {
-  title: 'iPrivacyHub - AI Enterprise Privacy Platform | AgentFlow AI',
+  title: 'iPrivacyHub - AI Enterprise Privacy Platform | AgentsFlow AI',
   description: 'AI enterprise privacy platform for comprehensive data protection and privacy compliance management.',
   alternates: {
     canonical: `${siteUrl}/tools/iprivacyhub`,
   },
   openGraph: {
-    title: 'iPrivacyHub - AI Enterprise Privacy Platform | AgentFlow AI',
+    title: 'iPrivacyHub - AI Enterprise Privacy Platform | AgentsFlow AI',
     description: 'AI enterprise privacy platform for comprehensive data protection and privacy compliance management.',
     url: `${siteUrl}/tools/iprivacyhub`,
     type: 'website',
@@ -19,6 +20,6 @@ export const metadata: Metadata = {
 }
 
 export default function IPrivacyHubPage() {
-  return <IPrivacyHubClient />
+  return <IPrivacyHub />
 }
 

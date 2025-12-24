@@ -46,7 +46,7 @@ const HomePageClient = () => {
               Who <span className="text-gradient">Are We</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-2">
-              AgentFlow.ai is a trusted leader in AI governance consulting. Our team of experts helps organizations build and operate AI responsibly—ensuring compliance, reducing risk, and earning customer trust. With deep regulatory expertise and proven governance frameworks, we empower enterprises to confidently navigate complex AI regulations and accelerate responsible AI adoption.
+              AgentsFlow.ai is a trusted leader in AI governance consulting. Our team of experts helps organizations build and operate AI responsibly—ensuring compliance, reducing risk, and earning customer trust. With deep regulatory expertise and proven governance frameworks, we empower enterprises to confidently navigate complex AI regulations and accelerate responsible AI adoption.
             </p>
           </motion.div>
 
@@ -273,9 +273,9 @@ const HomePageClient = () => {
           
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-stretch sm:items-center px-4">
-              <Link href="/tools/appsbee" className="w-full sm:w-auto">
+              <Link href="/tools/agentsflow" className="w-full sm:w-auto">
                   <Button size="lg" className="w-full sm:w-auto bg-[#0080FF] hover:bg-[#0066CC] text-white px-6 sm:px-8 py-3 sm:py-4">
-                  Explore AppsBee
+                  Explore AgentsFlow
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                 </Button>
               </Link>
@@ -365,7 +365,7 @@ const HomePageClient = () => {
               Our <span className="text-gradient">Advantage</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-              Why leading enterprises choose AgentFlow.ai for their AI governance needs
+              Why leading enterprises choose AgentsFlow.ai for their AI governance needs
             </p>
           </motion.div>
 
@@ -456,7 +456,7 @@ const HomePageClient = () => {
               Ready to Transform Your <span className="text-gradient">AI Governance</span>?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12 px-2">
-              Join leading enterprises who trust AgentFlow.ai to navigate the complex landscape 
+              Join leading enterprises who trust AgentsFlow.ai to navigate the complex landscape 
               of AI compliance and governance. Start your journey today.
             </p>
             

@@ -3,7 +3,7 @@
  * This ensures consistent site URL usage across the application
  */
 export const getSiteUrl = (): string => {
-  return process.env.NEXT_PUBLIC_SITE_URL || 'https://AgentFlow.ai';
+  return process.env.NEXT_PUBLIC_SITE_URL || 'https://AgentsFlow.ai';
 };
 
 /**

@@ -5,13 +5,13 @@ import { getSiteUrl } from '@/lib/site-url'
 const siteUrl = getSiteUrl()
 
 export const metadata: Metadata = {
-  title: 'Advisory & Architecture Services | AgentFlow AI',
+  title: 'Advisory & Architecture Services | AgentsFlow AI',
   description: 'Industry-specific blueprints and guardrails for AI governance.',
   alternates: {
     canonical: `${siteUrl}/services/advisory-architecture`,
   },
   openGraph: {
-    title: 'Advisory & Architecture Services | AgentFlow AI',
+    title: 'Advisory & Architecture Services | AgentsFlow AI',
     description: 'Industry-specific blueprints and guardrails for AI governance.',
     url: `${siteUrl}/services/advisory-architecture`,
     type: 'website',

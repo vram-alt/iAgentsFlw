@@ -53,9 +53,9 @@ const AboutClient = () => {
 
   const tools = [
     {
-      name: 'AppsBee',
+      name: 'AgentsFlow',
       description: 'Enterprise Apps & AI Governance platform for comprehensive visibility and control across your application ecosystem.',
-      link: '/tools/appsbee',
+      link: '/tools/AgentsFlow',
       features: ['AI Usage Monitoring', 'Shadow AI Detection', 'Policy Enforcement', 'Risk Assessment']
     },
     {
@@ -65,9 +65,9 @@ const AboutClient = () => {
       features: ['Automated Compliance', 'Real-time Monitoring', 'Audit Trail', 'Regulatory Updates']
     },
     {
-      name: 'AgentFlow',
+      name: 'AgentsFlow',
       description: 'Production-safe AI agents for enterprise with built-in governance, compliance, and security controls.',
-      link: '/tools/agentflow',
+      link: '/tools/AgentsFlow',
       features: ['AI Agent Orchestration', 'Safety Guardrails', 'Workflow Automation', 'Enterprise Integration']
     },
     {
@@ -166,7 +166,7 @@ const AboutClient = () => {
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
               About{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F47F21] to-[#FF6B35]">
-                AgentFlow.ai
+                AgentsFlow.ai
               </span>
             </h1>
             
@@ -578,7 +578,7 @@ const AboutClient = () => {
               Ready to Transform Your Compliance?
             </h2>
             <p className="text-xl text-gray-300 mb-10">
-              Join hundreds of enterprises already using AgentFlow.ai to automate and streamline their compliance processes.
+              Join hundreds of enterprises already using AgentsFlow.ai to automate and streamline their compliance processes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -588,7 +588,7 @@ const AboutClient = () => {
                 Get Started
               </Link>
               <Link
-                href="/tools/appsbee"
+                href="/tools/AgentsFlow"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white/20 rounded-lg hover:border-[#F47F21] transition-all hover:scale-105"
               >
                 Explore Our Tools

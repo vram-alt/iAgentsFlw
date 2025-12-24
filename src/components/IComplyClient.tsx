@@ -709,7 +709,7 @@ const IComplyClient = () => {
         'Fundamental Rights Impact Assessment (FRIA)',
         'Multi-stage workflows, roles & approvers',
         'Evidence collection & attestations',
-        'Integration with AppsBee for AI system data'
+        'Integration with AgentsFlow for AI system data'
       ]
     },
     program: {
@@ -729,10 +729,10 @@ const IComplyClient = () => {
       id: 'aigovernance',
       name: 'AI System Documentation',
       status: 'Audit-Ready',
-      description: 'Automated documentation for AI systems pulling data directly from AppsBee for audit readiness and regulatory compliance.',
+      description: 'Automated documentation for AI systems pulling data directly from AgentsFlow for audit readiness and regulatory compliance.',
       features: [
         'Technical documentation generation',
-        'AppsBee integration for real-time AI data',
+        'AgentsFlow integration for real-time AI data',
         'Audit trail and compliance evidence',
         'Automated report generation for regulators',
         'Version control and change tracking'
@@ -748,7 +748,7 @@ const IComplyClient = () => {
         'Regulatory change notifications',
         'Risk indicator tracking and alerts',
         'Incident management and reporting',
-        'Integration with AppsBee observability'
+        'Integration with AgentsFlow observability'
       ]
     },
     humanrights: {
@@ -787,7 +787,7 @@ const IComplyClient = () => {
       <div className="bg-[#0F172A]/30 border-b border-white/5">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
-            <a href="/" className="hover:text-white">AgentFlow.ai</a>
+            <a href="/" className="hover:text-white">AgentsFlow.ai</a>
             <span>/</span>
             <a href="/tools/icomply" className="text-[#F47F21]">iComply</a>
           </div>
@@ -830,7 +830,7 @@ const IComplyClient = () => {
                   AI Compliance <span className="text-[#F47F21]">Automation</span>.
                 </h1>
                 <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                  Automate AI regulatory compliance, risk management, and audit readiness for EU AI Act and beyond. Integrated with AppsBee for complete AI governance.
+                  Automate AI regulatory compliance, risk management, and audit readiness for EU AI Act and beyond. Integrated with AgentsFlow for complete AI governance.
                 </p>
               </motion.div>
 
@@ -841,7 +841,7 @@ const IComplyClient = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                {['EU AI Act', 'Risk Assessments', 'FRIA', 'Audit Ready', 'AppsBee Integration', 'Evidence'].map((badge, index) => (
+                {['EU AI Act', 'Risk Assessments', 'FRIA', 'Audit Ready', 'AgentsFlow Integration', 'Evidence'].map((badge, index) => (
                   <motion.div
                     key={badge}
                     initial={{ opacity: 0, scale: 0 }}
@@ -960,7 +960,7 @@ const IComplyClient = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">Six modules. Complete AI compliance coverage.</h2>
-            <p className="text-xl text-gray-300">Click each module to explore AI compliance features. Integrates with AppsBee for seamless governance.</p>
+            <p className="text-xl text-gray-300">Click each module to explore AI compliance features. Integrates with AgentsFlow for seamless governance.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -1007,7 +1007,7 @@ const IComplyClient = () => {
         </div>
       </section>
 
-      {/* AppsBee + iComply Integration Section */}
+      {/* AgentsFlow + iComply Integration Section */}
       <section className="py-20 bg-gradient-to-br from-[#F47F21]/10 via-[#0A0F1A] to-[#0E2A47]/10">
         <div className="container mx-auto px-6">
           <motion.div
@@ -1017,15 +1017,15 @@ const IComplyClient = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">
-              <span className="text-[#F47F21]">AppsBee + iComply</span>: Complete AI Governance & Compliance
+              <span className="text-[#F47F21]">AgentsFlow + iComply</span>: Complete AI Governance & Compliance
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              The power of iComply is amplified when combined with AppsBee. Every compliance requirement can be automatically validated with real-time data from your AI systems.
+              The power of iComply is amplified when combined with AgentsFlow. Every compliance requirement can be automatically validated with real-time data from your AI systems.
             </p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-12 mb-12">
-            {/* AppsBee Side */}
+            {/* AgentsFlow Side */}
             <Card className="bg-[#0F172A]/50 backdrop-blur-md border-[#F47F21]/30">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
@@ -1033,12 +1033,12 @@ const IComplyClient = () => {
                     <Shield className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold">AppsBee</h3>
+                    <h3 className="text-2xl font-bold">AgentsFlow</h3>
                     <p className="text-gray-400">AI Governance Platform</p>
                   </div>
                 </div>
                 <p className="text-gray-300 mb-6">
-                  AppsBee tracks models, agents, prompts, guardrails, and AI system performance in real-time.
+                  AgentsFlow tracks models, agents, prompts, guardrails, and AI system performance in real-time.
                 </p>
                 <ul className="space-y-3">
                   {[
@@ -1071,11 +1071,11 @@ const IComplyClient = () => {
                   </div>
                 </div>
                 <p className="text-gray-300 mb-6">
-                  iComply automates compliance documentation, risk assessments, and audit readiness using AppsBee&apos;s data.
+                  iComply automates compliance documentation, risk assessments, and audit readiness using AgentsFlow&apos;s data.
                 </p>
                 <ul className="space-y-3">
                   {[
-                    'EU AI Act FRIA with AppsBee data',
+                    'EU AI Act FRIA with AgentsFlow data',
                     'Automated technical documentation',
                     'Real-time compliance monitoring',
                     'Audit-ready evidence generation',
@@ -1106,7 +1106,7 @@ const IComplyClient = () => {
                 <div className="text-center">
                   <div className="text-4xl font-bold text-[#F47F21] mb-3">Audit-Ready</div>
                   <p className="text-gray-300">
-                    Every compliance requirement is backed by actual evidence from AppsBee—not just documents.
+                    Every compliance requirement is backed by actual evidence from AgentsFlow—not just documents.
                   </p>
                 </div>
                 <div className="text-center">
@@ -1213,7 +1213,7 @@ const IComplyClient = () => {
                 <h3 className="text-xl font-semibold mb-2">Faster EU AI Act Compliance</h3>
                 <p className="text-gray-300">Time to audit readiness reduced from 6 months to 3 weeks</p>
                 <div className="mt-4 text-sm text-gray-400">
-                  &ldquo;iComply + AppsBee gave us instant audit-ready documentation&rdquo;
+                  &ldquo;iComply + AgentsFlow gave us instant audit-ready documentation&rdquo;
                   <br />— AI Compliance Officer, Tech Unicorn
                 </div>
               </CardContent>
@@ -1446,7 +1446,7 @@ const IComplyClient = () => {
                   <div className="flex items-start space-x-3">
                     <Checkbox className="mt-1" />
                     <label className="text-sm text-gray-300">
-                      I agree to receive marketing communications from AgentFlow.ai. 
+                      I agree to receive marketing communications from AgentsFlow.ai. 
                       You can unsubscribe at any time. <a href="#" className="text-[#F47F21] hover:underline">Privacy Policy</a>
                     </label>
                   </div>
@@ -1522,11 +1522,11 @@ const IComplyClient = () => {
                 <CardContent className="p-6">
                   <details className="group">
                     <summary className="flex items-center justify-between cursor-pointer font-semibold text-lg">
-                      What&apos;s the difference between iComply and AppsBee?
+                      What&apos;s the difference between iComply and AgentsFlow?
                       <ChevronDown className="w-5 h-5 group-open:rotate-180 transition-transform" />
                     </summary>
                     <div className="mt-4 text-gray-300">
-                      <p>AppsBee focuses on AI governance (models, agents, prompts), while iComply handles AI compliance automation (risk assessments, audit readiness, regulatory obligations). Together they provide complete coverage—AppsBee tracks your AI systems in real-time, and iComply uses that data to automate compliance documentation and evidence generation for EU AI Act and other regulations.</p>
+                      <p>AgentsFlow focuses on AI governance (models, agents, prompts), while iComply handles AI compliance automation (risk assessments, audit readiness, regulatory obligations). Together they provide complete coverage—AgentsFlow tracks your AI systems in real-time, and iComply uses that data to automate compliance documentation and evidence generation for EU AI Act and other regulations.</p>
                     </div>
                   </details>
                 </CardContent>
@@ -1570,11 +1570,11 @@ const IComplyClient = () => {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start sm:items-center justify-between">
             <div>
               <h3 className="text-lg sm:text-xl font-bold mb-2">Need AI Governance for Your Models & Agents?</h3>
-              <p className="text-sm sm:text-base text-gray-300">Complete your compliance with AppsBee—real-time AI system tracking for automated evidence generation</p>
+              <p className="text-sm sm:text-base text-gray-300">Complete your compliance with AgentsFlow—real-time AI system tracking for automated evidence generation</p>
             </div>
-            <Link href="/tools/appsbee" className="w-full sm:w-auto">
+            <Link href="/tools/AgentsFlow" className="w-full sm:w-auto">
               <Button className="w-full sm:w-auto bg-[#F47F21] hover:bg-[#F47F21]/90 text-white">
-                Explore AppsBee →
+                Explore AgentsFlow →
               </Button>
             </Link>
           </div>

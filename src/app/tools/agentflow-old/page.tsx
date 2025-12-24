@@ -1,24 +1,24 @@
 import type { Metadata } from 'next'
-import AgentFlowClient from '@/components/AgentFlowClient'
+import AgentsFlowClient from '@/components/AgentsFlowClient'
 import { getSiteUrl } from '@/lib/site-url'
 
 const siteUrl = getSiteUrl()
 
 export const metadata: Metadata = {
-  title: 'AgentFlow - Production-Safe AI Agents for Enterprise | AgentFlow AI',
+  title: 'AgentsFlow - Production-Safe AI Agents for Enterprise | AgentsFlow AI',
   description: 'Production-safe AI agents for enterprise with built-in governance, compliance, and security controls.',
   alternates: {
-    canonical: `${siteUrl}/tools/agentflow-old`,
+    canonical: `${siteUrl}/tools/AgentsFlow-old`,
   },
   openGraph: {
-    title: 'AgentFlow - Production-Safe AI Agents for Enterprise | AgentFlow AI',
+    title: 'AgentsFlow - Production-Safe AI Agents for Enterprise | AgentsFlow AI',
     description: 'Production-safe AI agents for enterprise with built-in governance, compliance, and security controls.',
-    url: `${siteUrl}/tools/agentflow-old`,
+    url: `${siteUrl}/tools/AgentsFlow-old`,
     type: 'website',
   },
 }
 
-export default function AgentFlowPage() {
-  return <AgentFlowClient />
+export default function AgentsFlowPage() {
+  return <AgentsFlowClient />
 }
 

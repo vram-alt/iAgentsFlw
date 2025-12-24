@@ -27,7 +27,7 @@ const IndustriesClient = () => {
       <div className="bg-[#0F172A]/30 border-b border-white/5 pt-20">
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
-            <Link href="/" className="hover:text-white">AgentFlow.ai</Link>
+            <Link href="/" className="hover:text-white">AgentsFlow.ai</Link>
             <span>/</span>
             <span className="text-[#F47F21]">Industries</span>
           </div>
@@ -282,7 +282,7 @@ const IndustriesClient = () => {
             <CardContent className="p-12 text-center">
               <h2 className="text-3xl font-bold mb-4">Ready to Discuss Your Industry Needs?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Schedule a consultation with our industry experts to explore how AgentFlow can help you deploy AI safely and compliantly.
+                Schedule a consultation with our industry experts to explore how AgentsFlow can help you deploy AI safely and compliantly.
               </p>
               <Button 
                 size="lg" 

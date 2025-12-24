@@ -1,0 +1,76 @@
+'use client'
+
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import ContactFormModal from '@/components/ContactFormModal';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { 
+  Shield, 
+  AlertTriangle, 
+  CheckCircle, 
+  TrendingUp,
+  Target,
+  Users,
+  ArrowRight,
+  Clock,
+  Zap,
+  FileText
+} from 'lucide-react';
+
+const HeroSection =()=>{
+     const [contactModalOpen, setContactModalOpen] = useState(false);
+    return (
+        <>
+        <section className="pt-20 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#F47F21]/5 via-transparent to-[#FF6B35]/5" />
+        
+        <div className="container mx-auto px-4 sm:px-6 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center space-y-6"
+          >
+            <Badge variant="secondary" className="bg-[#F47F21]/10 text-[#F47F21] border-[#F47F21]/20">
+              Managed Service
+            </Badge>
+            
+            <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
+              Guardrail{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F47F21] to-[#FF6B35]">
+                Monitoring & Management
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 leading-relaxed">
+              24/7 monitoring of AI guardrails with expert analysis, actionable fixes, and continuous optimization to keep your AI systems safe and compliant.
+            </p>
+
+            <div className="flex flex-wrap gap-4 justify-center pt-4">
+              <Button 
+                size="lg" 
+                className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
+                onClick={() => setContactModalOpen(true)}
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="border-[#F47F21] text-[#F47F21] hover:bg-[#F47F21] hover:text-white"
+                asChild
+              >
+                <Link href="/services/managed-services">View All Services</Link>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+        </>
+    )
+}
+export default HeroSection

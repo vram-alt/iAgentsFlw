@@ -32,7 +32,7 @@ const SalesforceClient = () => {
       <div className="bg-[#0F172A]/30 border-b border-white/5 pt-20">
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
-            <Link href="/" className="hover:text-white">AgentFlow.ai</Link>
+            <Link href="/" className="hover:text-white">AgentsFlow.ai</Link>
             <span>/</span>
             <Link href="/platforms" className="hover:text-white">Platforms</Link>
             <span>/</span>
@@ -64,7 +64,7 @@ const SalesforceClient = () => {
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
-              Enhance Salesforce Einstein and Agentforce with comprehensive AI governance. AgentFlow extends the Einstein Trust Layer with advanced monitoring, compliance, and control capabilities.
+              Enhance Salesforce Einstein and Agentforce with comprehensive AI governance. AgentsFlow extends the Einstein Trust Layer with advanced monitoring, compliance, and control capabilities.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center pt-4">
@@ -92,7 +92,7 @@ const SalesforceClient = () => {
           >
             <h2 className="text-3xl font-bold mb-4">Extending Salesforce AI Capabilities</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Salesforce provides the foundation. AgentFlow adds comprehensive governance and compliance.
+              Salesforce provides the foundation. AgentsFlow adds comprehensive governance and compliance.
             </p>
           </motion.div>
 
@@ -140,7 +140,7 @@ const SalesforceClient = () => {
             <Card className="bg-gradient-to-br from-[#F47F21]/10 to-[#FF6B35]/10 border-[#F47F21]/50">
               <CardHeader>
                 <Shield className="w-12 h-12 text-[#F47F21] mb-4" />
-                <CardTitle>What AgentFlow Adds</CardTitle>
+                <CardTitle>What AgentsFlow Adds</CardTitle>
                 <p className="text-sm text-gray-400">Advanced governance and compliance layer</p>
               </CardHeader>
               <CardContent>
@@ -189,7 +189,7 @@ const SalesforceClient = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl font-bold mb-4">AgentFlow for Salesforce</h2>
+            <h2 className="text-3xl font-bold mb-4">AgentsFlow for Salesforce</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Native integration with Salesforce Einstein, Agentforce, and Data Cloud
             </p>
@@ -318,7 +318,7 @@ const SalesforceClient = () => {
           >
             <h2 className="text-3xl font-bold mb-4">Salesforce AI Use Cases</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Common Salesforce AI scenarios enhanced by AgentFlow
+              Common Salesforce AI scenarios enhanced by AgentsFlow
             </p>
           </motion.div>
 
@@ -330,7 +330,7 @@ const SalesforceClient = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-3">Sales AI Agents</h3>
                     <p className="text-gray-300 mb-4">
-                      Agentforce SDRs generating emails, updating opportunities, and making recommendations. AgentFlow ensures brand consistency, prevents data leakage, and monitors for inappropriate content.
+                      Agentforce SDRs generating emails, updating opportunities, and making recommendations. AgentsFlow ensures brand consistency, prevents data leakage, and monitors for inappropriate content.
                     </p>
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                       <div className="bg-black/20 p-4 rounded">
@@ -342,7 +342,7 @@ const SalesforceClient = () => {
                         </ul>
                       </div>
                       <div className="bg-black/20 p-4 rounded">
-                        <h4 className="font-semibold mb-2 text-[#F47F21]">AgentFlow Solution</h4>
+                        <h4 className="font-semibold mb-2 text-[#F47F21]">AgentsFlow Solution</h4>
                         <ul className="space-y-1 text-sm">
                           <li className="flex items-start"><CheckCircle className="w-3 h-3 text-[#F47F21] mr-2 mt-1 flex-shrink-0" /> Content validation before send</li>
                           <li className="flex items-start"><CheckCircle className="w-3 h-3 text-[#F47F21] mr-2 mt-1 flex-shrink-0" /> Brand guideline enforcement</li>
@@ -362,7 +362,7 @@ const SalesforceClient = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-3">Service AI Agents</h3>
                     <p className="text-gray-300 mb-4">
-                      Einstein Service Agents resolving cases, accessing customer data, and escalating issues. AgentFlow ensures PHI/PII protection, accurate responses, and compliance with SLAs.
+                      Einstein Service Agents resolving cases, accessing customer data, and escalating issues. AgentsFlow ensures PHI/PII protection, accurate responses, and compliance with SLAs.
                     </p>
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                       <div className="bg-black/20 p-4 rounded">
@@ -374,7 +374,7 @@ const SalesforceClient = () => {
                         </ul>
                       </div>
                       <div className="bg-black/20 p-4 rounded">
-                        <h4 className="font-semibold mb-2 text-[#F47F21]">AgentFlow Solution</h4>
+                        <h4 className="font-semibold mb-2 text-[#F47F21]">AgentsFlow Solution</h4>
                         <ul className="space-y-1 text-sm">
                           <li className="flex items-start"><CheckCircle className="w-3 h-3 text-[#F47F21] mr-2 mt-1 flex-shrink-0" /> Response accuracy validation</li>
                           <li className="flex items-start"><CheckCircle className="w-3 h-3 text-[#F47F21] mr-2 mt-1 flex-shrink-0" /> PHI/PII masking</li>
@@ -433,7 +433,7 @@ const SalesforceClient = () => {
             <CardContent className="p-12 text-center">
               <h2 className="text-3xl font-bold mb-4">Ready to Govern Your Salesforce AI?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Schedule a demo to see how AgentFlow enhances Salesforce Einstein and Agentforce with comprehensive AI governance.
+                Schedule a demo to see how AgentsFlow enhances Salesforce Einstein and Agentforce with comprehensive AI governance.
               </p>
               <Button 
                 size="lg" 

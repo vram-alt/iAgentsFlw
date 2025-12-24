@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div className="sm:col-span-2 md:col-span-3 lg:col-span-2">
-            <h3 className="font-display font-bold text-lg sm:text-xl mb-3 sm:mb-4">AgentFlow.ai</h3>
+            <h3 className="font-display font-bold text-lg sm:text-xl mb-3 sm:mb-4">AgentsFlow.ai</h3>
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Leading AI compliance and governance platform for enterprises.
             </p>
@@ -15,11 +15,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Products</h4>
             <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
-              <li><Link href="/tools/appsbee" className="hover:text-foreground transition-colors">AppsBee</Link></li>
+              <li><Link href="/tools/agentsflow" className="hover:text-foreground transition-colors">AgentsFlow</Link></li>
               <li><Link href="/tools/icomply" className="hover:text-foreground transition-colors">iComply</Link></li>
-              <li><Link href="/tools/agentflow" className="hover:text-foreground transition-colors">AgentFlow</Link></li>
+              {/* <li><Link href="/tools/AgentsFlow" className="hover:text-foreground transition-colors">AgentsFlow</Link></li>
               <li><Link href="/tools/docx" className="hover:text-foreground transition-colors">DocX.AI</Link></li>
-              <li><Link href="/tools/iprivacyhub" className="hover:text-foreground transition-colors">iPrivacyHub</Link></li>
+              <li><Link href="/tools/iprivacyhub" className="hover:text-foreground transition-colors">iPrivacyHub</Link></li> */}
             </ul>
           </div>
           
@@ -74,7 +74,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Company</h4>
             <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
-              <li><a href="https://AgentFlow.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">About</a></li>
+              <li><a href="https://AgentsFlow.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">About</a></li>
               <li><Link href="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
               <li><Link href="/partners" className="hover:text-foreground transition-colors">Partners</Link></li>
             </ul>
@@ -93,7 +93,7 @@ const Footer = () => {
           <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-4">
             {/* Copyright Text */}
             <div className="text-sm sm:text-base text-muted-foreground">
-              <p>&copy; 2025 AgentFlow Corp. All rights reserved.</p>
+              <p>&copy; 2025 AgentsFlow Corp. All rights reserved.</p>
             </div>
             
             {/* Social Icons */}
@@ -101,7 +101,7 @@ const Footer = () => {
               <li>
                 <a 
                   target="_blank" 
-                  href="https://www.facebook.com/AgentFlow/" 
+                  href="https://www.facebook.com/AgentsFlow/" 
                   title="Facebook"
                   className="flex items-center justify-center w-10 h-10 bg-white rounded-full hover:opacity-80 transition-opacity"
                 >
@@ -113,7 +113,7 @@ const Footer = () => {
               <li>
                 <a 
                   target="_blank" 
-                  href="https://twitter.com/AgentFlow" 
+                  href="https://twitter.com/AgentsFlow" 
                   title="Twitter"
                   className="flex items-center justify-center w-10 h-10 bg-white rounded-full hover:opacity-80 transition-opacity"
                 >
@@ -127,7 +127,7 @@ const Footer = () => {
               <li>
                 <a 
                   target="_blank" 
-                  href="https://www.linkedin.com/company/AgentFlow/" 
+                  href="https://www.linkedin.com/company/AgentsFlow/" 
                   title="Linkedin"
                   className="flex items-center justify-center w-10 h-10 bg-white rounded-full hover:opacity-80 transition-opacity"
                 >
@@ -151,7 +151,7 @@ const Footer = () => {
               <li>
                 <a 
                   target="_blank" 
-                  href="https://www.instagram.com/AgentFlowofficial/" 
+                  href="https://www.instagram.com/AgentsFlowofficial/" 
                   title="Instagram"
                   className="flex items-center justify-center w-10 h-10 bg-white rounded-full hover:opacity-80 transition-opacity"
                 >

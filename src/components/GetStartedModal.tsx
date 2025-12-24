@@ -222,7 +222,7 @@ const GetStartedModal = ({ isOpen, onClose }: GetStartedModalProps) => {
                         <SelectValue placeholder="What are you most interested in?" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="ai-governance">AI Governance (AppsBee)</SelectItem>
+                        <SelectItem value="ai-governance">AI Governance (AgentsFlow)</SelectItem>
                         <SelectItem value="compliance-automation">Compliance Automation (iComply)</SelectItem>
                         <SelectItem value="both">Both AI Governance & Compliance</SelectItem>
                         <SelectItem value="assessment">Free Assessment Only</SelectItem>

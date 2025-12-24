@@ -183,9 +183,9 @@ const PartnersClient = () => {
               Join our growing ecosystem of partners and help shape the future of AI compliance.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              Contact us at: <a href="mailto:hello@AgentFlow.com" className="text-brand-2 hover:underline font-medium">hello@AgentFlow.com</a>
+              Contact us at: <a href="mailto:hello@AgentsFlow.com" className="text-brand-2 hover:underline font-medium">hello@AgentsFlow.com</a>
             </p>
-            <a href="mailto:hello@AgentFlow.com" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:hello@AgentsFlow.com" target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
                 className="bg-brand-2 hover:bg-brand-2/90 text-white font-medium px-8 py-4 text-lg"

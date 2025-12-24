@@ -170,7 +170,7 @@ const SplitRevealHero = () => {
                 className="absolute inset-0 bg-gradient-to-r from-green-500/30 via-green-500/20 to-transparent p-4 sm:p-6 md:p-8"
                 style={{ clipPath: `inset(0 ${100 - dragPosition}% 0 0)` }}
               >
-                <div className="text-green-400 font-bold text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6">With AgentFlow.ai</div>
+                <div className="text-green-400 font-bold text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6">With AgentsFlow.ai</div>
                 <div className="space-y-3 sm:space-y-4">
                   {solutionMetrics.map((metric, index) => (
                     <motion.div

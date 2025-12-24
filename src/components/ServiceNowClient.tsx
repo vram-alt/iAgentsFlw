@@ -18,7 +18,7 @@ const ServiceNowClient = () => {
       <div className="bg-[#0F172A]/30 border-b border-white/5 pt-20">
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
-            <Link href="/" className="hover:text-white">AgentFlow.ai</Link>
+            <Link href="/" className="hover:text-white">AgentsFlow.ai</Link>
             <span>/</span>
             <Link href="/platforms" className="hover:text-white">Platforms</Link>
             <span>/</span>
@@ -49,7 +49,7 @@ const ServiceNowClient = () => {
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
-              Enhance ServiceNow Now Assist with comprehensive AI governance. AgentFlow adds advanced monitoring, compliance controls, and enterprise-grade governance to your ITSM AI.
+              Enhance ServiceNow Now Assist with comprehensive AI governance. AgentsFlow adds advanced monitoring, compliance controls, and enterprise-grade governance to your ITSM AI.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center pt-4">
@@ -141,7 +141,7 @@ const ServiceNowClient = () => {
             <CardContent className="p-12 text-center">
               <h2 className="text-3xl font-bold mb-4">Govern Your ServiceNow AI</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Schedule a demo to see how AgentFlow enhances ServiceNow Now Assist with comprehensive AI governance.
+                Schedule a demo to see how AgentsFlow enhances ServiceNow Now Assist with comprehensive AI governance.
               </p>
               <Button 
                 size="lg" 

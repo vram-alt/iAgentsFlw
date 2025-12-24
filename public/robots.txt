@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://AgentFlow.ai/sitemap.xml
+Sitemap: https://AgentsFlow.ai/sitemap.xml

@@ -104,7 +104,7 @@ const ContactClient = () => {
                     <div>
                       <h3 className="font-semibold mb-2">Office Address</h3>
                       <p className="text-gray-300">
-                        AgentFlow Technologies<br />
+                        AgentsFlow Technologies<br />
                         123 Business Avenue<br />
                         San Francisco, CA 94105<br />
                         United States
@@ -134,9 +134,9 @@ const ContactClient = () => {
                     <div>
                       <h3 className="font-semibold mb-2">Email</h3>
                       <p className="text-gray-300">
-                        General: info@AgentFlow.ai<br />
-                        Sales: sales@AgentFlow.ai<br />
-                        Support: support@AgentFlow.ai
+                        General: info@AgentsFlow.ai<br />
+                        Sales: sales@AgentsFlow.ai<br />
+                        Support: support@AgentsFlow.ai
                       </p>
                     </div>
                   </div>

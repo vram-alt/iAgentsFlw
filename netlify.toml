@@ -1,20 +1,20 @@
 # Redirect www to non-www (301 permanent redirect)
 [[redirects]]
-  from = "https://www.AgentFlow.ai/*"
-  to = "https://AgentFlow.ai/:splat"
+  from = "https://www.AgentsFlow.ai/*"
+  to = "https://AgentsFlow.ai/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "http://www.AgentFlow.ai/*"
-  to = "https://AgentFlow.ai/:splat"
+  from = "http://www.AgentsFlow.ai/*"
+  to = "https://AgentsFlow.ai/:splat"
   status = 301
   force = true
 
 # Redirect http to https (301 permanent redirect)
 [[redirects]]
-  from = "http://AgentFlow.ai/*"
-  to = "https://AgentFlow.ai/:splat"
+  from = "http://AgentsFlow.ai/*"
+  to = "https://AgentsFlow.ai/:splat"
   status = 301
   force = true
 

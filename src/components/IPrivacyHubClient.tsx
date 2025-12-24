@@ -456,7 +456,7 @@ const IPrivacyHubClient = () => {
             >
               <Badge className="bg-[#F47F21]/10 text-[#F47F21] border-[#F47F21]/20 text-lg px-4 py-2">
                 <Shield className="w-4 h-4 mr-2" />
-                iPrivacyHub by AgentFlow
+                iPrivacyHub by AgentsFlow
               </Badge>
 
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">

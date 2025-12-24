@@ -33,7 +33,7 @@ import {
 } from 'lucide-react';
 import ContactFormModal from '@/components/ContactFormModal';
 
-const AgentFlowClient = () => {
+const AgentsFlowClient = () => {
   const [activeNode, setActiveNode] = useState(0);
   const [contactModalOpen, setContactModalOpen] = useState(false);
   const [selectedUseCase, setSelectedUseCase] = useState('itsm');
@@ -222,7 +222,7 @@ const AgentFlowClient = () => {
               <div className="space-y-6">
                 <Badge className="bg-[#F47F21]/10 text-[#F47F21] border-[#F47F21]/20">
                   <Bot className="w-3 h-3 mr-1" />
-                  AgentFlow by AgentFlow
+                  AgentsFlow by AgentsFlow
                 </Badge>
 
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
@@ -698,13 +698,13 @@ const AgentFlowClient = () => {
       <ContactFormModal
         isOpen={contactModalOpen}
         onClose={() => setContactModalOpen(false)}
-        serviceType="agentflow"
+        serviceType="AgentsFlow"
       />
     </div>
   );
 };
 
-export default AgentFlowClient;
+export default AgentsFlowClient;
 
 
 
