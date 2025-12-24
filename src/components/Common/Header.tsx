@@ -31,6 +31,16 @@ const Header = () => {
               quality={90}
               loading="eager"
             />
+             {/* <img
+              alt="AgentsFlow Logo"
+              fetchpriority="high"
+              loading="eager"
+              width="200"
+              height="48"
+              decoding="async"
+              className="h-12 w-auto object-contain"
+              src="ttps://iagentsflow.com/images/logo.webp"
+            /> */}
           </Link>
 
           {/* Desktop Menu */}
