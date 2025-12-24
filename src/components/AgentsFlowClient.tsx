@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import ContactFormModal from '@/components/ContactFormModal';
 import Apps360Wheel from '@/components/Apps360Wheel';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -1035,12 +1034,13 @@ const AgentsFlowClient = () => {
             <div className="space-y-6">
               <div className="mb-8 flex justify-center">
                 <div className="relative h-[86px] w-[400px]">
-                  <Image
+                  <img
                     src="/images/logo.webp"
-                    alt="Agent Flow Logo"
-                    fill
-                    className="object-contain"
-                    priority
+                    alt="Agents Flow Logo"
+                    className="object-contain absolute inset-0 w-full h-full"
+                    fetchPriority="high"
+                    loading="eager"
+                    decoding="async"
                   />
                 </div>
               </div>
