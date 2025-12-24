@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Menu, X } from 'lucide-react';
@@ -21,26 +20,16 @@ const Header = () => {
         <div className="flex items-center justify-between h-18 py-2">
           {/* Logo */}
           <Link href="/" className="hover:scale-105 transition-transform flex items-center">
-            <Image 
-              src="/images/logo.webp" 
-              alt="AgentsFlow Logo" 
-              width={200}
-              height={48}
-              className="h-12 w-auto object-contain"
-              priority
-              quality={90}
-              loading="eager"
-            />
-             {/* <img
+            <img
+              src="/images/logo.webp"
               alt="AgentsFlow Logo"
-              fetchpriority="high"
-              loading="eager"
               width="200"
               height="48"
-              decoding="async"
               className="h-12 w-auto object-contain"
-              src="ttps://iagentsflow.com/images/logo.webp"
-            /> */}
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+            />
           </Link>
 
           {/* Desktop Menu */}
