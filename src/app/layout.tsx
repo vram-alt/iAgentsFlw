@@ -83,7 +83,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-[#0A0F1A] text-white antialiased">
       <meta name="google-site-verification" content="google92184f902c0fcca1"/>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-QLW47KQ5FN"
+          src="https://www.googletagmanager.com/gtag/js?id=G-M0NYL8WEQN"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -91,7 +91,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-QLW47KQ5FN');
+            gtag('config', 'G-M0NYL8WEQN');
           `}
         </Script>
         <Providers>
