@@ -9,6 +9,7 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 const Header = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   
@@ -123,12 +124,46 @@ const Header = () => {
               Resources
             </Link>
             */}
-            <Link href="/contact" className="text-white hover:text-[#0080FF] transition-colors px-3 py-2 rounded-lg hover:bg-white/5 font-medium">
-              Contact
+            <Link
+              href="/blog" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#0080FF] transition-colors px-3 py-2 rounded-lg hover:bg-white/5 font-medium"
+            >
+              Blog
             </Link>
-            <Link href="/about" className="text-white hover:text-[#0080FF] transition-colors px-3 py-2 rounded-lg hover:bg-white/5 font-medium">
-              About Us
-            </Link>
+            
+            {/* About Us Dropdown */}
+            <div className="relative"
+                 onMouseEnter={() => setIsAboutOpen(true)}
+                 onMouseLeave={() => setIsAboutOpen(false)}>
+              <button className="flex items-center text-white hover:text-[#0080FF] transition-colors px-3 py-2 rounded-lg hover:bg-white/5 font-medium">
+                About Us <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              <AnimatePresence>
+                {isAboutOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full right-0 mt-2 w-64 bg-[#0F172A]/95 backdrop-blur-md border-2 border-white/20 rounded-xl p-4 shadow-2xl z-50"
+                  >
+                    <Link href="/about" className="block p-3 rounded-lg hover:bg-white/10 transition-colors border-b border-white/10 mb-2">
+                      <div className="font-medium text-white">About Us</div>
+                      <div className="text-sm text-gray-400">Learn about our mission and team</div>
+                    </Link>
+                    <Link href="/founders-note" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
+                      <div className="font-medium text-white">Founder&apos;s Note</div>
+                      <div className="text-sm text-gray-400">A message from our founder</div>
+                    </Link>
+                    <Link href="/contact" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
+                      <div className="font-medium text-white">Contact</div>
+                      <div className="text-sm text-gray-400">Get in touch with us</div>
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -186,12 +221,26 @@ const Header = () => {
                 <Link href="/partners" className="block text-white hover:text-[#0080FF] transition-colors">
                   Partners
                 </Link>
-                <Link href="/contact" className="block text-white hover:text-[#0080FF] transition-colors">
-                  Contact
-                </Link>
-                <Link href="/about" className="block text-white hover:text-[#0080FF] transition-colors">
-                  About Us
-                </Link>
+                <a 
+                  href="https://blog.iagentsflow.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-white hover:text-[#0080FF] transition-colors"
+                >
+                  Blog
+                </a>
+                <div className="space-y-2">
+                  <div className="text-gray-400 text-sm font-medium">About Us</div>
+                  <Link href="/about" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
+                    About Us
+                  </Link>
+                  <Link href="/founders-note" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
+                    Founder&apos;s Note
+                  </Link>
+                  <Link href="/contact" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
+                    Contact
+                  </Link>
+                </div>
               </div>
             </motion.div>
           )}
