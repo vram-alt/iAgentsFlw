@@ -92,7 +92,7 @@ const FoundersNoteClient = () => {
                   <span className="text-gray-300 text-lg leading-snug">Warm regards,</span><br/>  
                   <span className="text-lg leading-snug font-semibold text-white">Ram Venky</span><br/>  
                   <span className="text-gray-300 text-lg leading-snug italic"><span className="font-mono">0 = [x-y]-1</span></span><br/>  
-                  <span className="text-gray-300 text-lg leading-snug italic">Infocomply.ai</span>
+                  <span className="text-gray-300 text-lg leading-snug italic">Iagentsflow.ai</span>
                 </div>
               </CardContent>
             </Card>
