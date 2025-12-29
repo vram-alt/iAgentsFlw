@@ -18,6 +18,7 @@ import author from '@/sanity/schemas/documents/author'
 
 import seo from '@/sanity/schemas/objects/seo'
 import blockContent from '@/sanity/schemas/objects/blockContent'
+import page from '@/sanity/schemas/documents/page'
 
 
 
@@ -39,6 +40,7 @@ export default defineConfig({
       post,
       blogCategory,
       author,
+      page,
       //
       // Objects
       

@@ -9,6 +9,7 @@ import {
   allCategoriesQuery,
   postsByCategorySlugQuery,
   postBySlugQuery,
+  pagesBySlugQuery,
 } from '@/sanity/lib/queries'
 
 import { token } from '@/sanity/lib/token'
@@ -80,5 +81,13 @@ export function loadPost(slug:string) {
     postBySlugQuery,
     { slug },
     { next: { tags: [`post:${slug}`] } },
+  )
+}
+
+export function loadPage(slug: string) {
+  return loadQuery<PagePayload | null>(
+    pagesBySlugQuery,
+    { slug },
+    { next: { tags: [`page:${slug}`] } },
   )
 }

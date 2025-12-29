@@ -23,6 +23,12 @@ export default defineType({
         Rule.required().max(150).warning('Longer descriptions may be truncated by search engines'),
     }),
     defineField({
+      name: 'keywords',
+      title: 'Keywords',
+      type: 'string',
+      description: 'Comma-separated keywords for SEO',
+    }),
+    defineField({
       title: 'Social Share Image',
       name: 'shareImage',
       type: 'image',

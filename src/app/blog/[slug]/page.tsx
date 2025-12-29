@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { loadPost } from '@/sanity/loader/loadQuery'
 import { getSiteUrl } from '@/lib/site-url'
+import { seoGenerateMetadata } from '@/components/Seo'
 import BlogPostContent from './BlogPostContent'
 
 const siteUrl = getSiteUrl()
@@ -48,37 +49,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   const postData = post as PostData
-  return {
-    title: postData.seo?.metaTitle || postData.title,
-    description: postData.seo?.metaDescription || postData.expert || '',
-    alternates: {
-      canonical: pageUrl,
-    },
-    openGraph: {
-      title: postData.seo?.metaTitle || postData.title,
-      description: postData.seo?.metaDescription || postData.expert || '',
-      url: pageUrl,
-      type: 'article',
-      publishedTime: postData.publishedAt,
-      authors: postData.authorData?.name ? [postData.authorData.name] : [],
-      images: postData.seo?.metaImage
-        ? [
-            {
-              url: postData.seo.metaImage,
-              width: 1200,
-              height: 630,
-              alt: postData.title,
-            },
-          ]
-        : [],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: postData.seo?.metaTitle || postData.title,
-      description: postData.seo?.metaDescription || postData.expert || '',
-      images: postData.seo?.metaImage ? [postData.seo.metaImage] : [],
-    },
-  }
+  const title = postData.seo?.metaTitle || postData.title || ''
+  const description = postData.seo?.metaDescription || postData.expert || ''
+  const imageUrl = postData.seo?.metaImage || undefined
+  
+  return seoGenerateMetadata({
+    title,
+    description,
+    url: pageUrl,
+    imageUrl,
+    imageAlt: title,
+  })
 }
 
 async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

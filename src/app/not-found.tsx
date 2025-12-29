@@ -1,9 +1,35 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import type { Metadata } from 'next'
+import { getSiteUrl } from '@/lib/site-url'
+import { seoGenerateMetadata } from '@/components/Seo'
+import { loadPage } from '@/sanity/loader/loadQuery'
 
-export const metadata = {
-  title: '404 - Page Not Found',
-  description: 'The page you are looking for does not exist.',
+const siteUrl = getSiteUrl()
+
+export async function generateMetadata(): Promise<Metadata> {
+  const pageUrl = `${siteUrl}/404`
+  const { data: page } = await loadPage('404')
+
+  if (page) {
+    const keywordsArray = page?.seo?.keywords && typeof page.seo.keywords === 'string'
+      ? page.seo.keywords.split(',').map((k: string) => k.trim()).filter((k: string) => k.length > 0)
+      : undefined
+
+    return seoGenerateMetadata({
+      title: page?.seo?.metaTitle || '',
+      description: page?.seo?.metaDescription || '',
+      url: pageUrl,
+      imageUrl: page?.seo?.metaImage || '',
+      keywords: keywordsArray,
+    })
+  }
+
+  return seoGenerateMetadata({
+    title: '404 - Page Not Found',
+    description: 'The page you are looking for does not exist.',
+    url: pageUrl,
+  })
 }
 
 export default function NotFound() {

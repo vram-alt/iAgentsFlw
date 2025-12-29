@@ -139,3 +139,18 @@ export const postBySlugQuery = groq`
   }
   }
 `
+
+export const pagesBySlugQuery = groq`
+  *[_type == "page" && slug.current == $slug && !(_id in path("drafts.**"))][0] {
+    _id,
+    title,
+    seo{
+      "metaImage": shareImage.asset->url + "?w=1200&h=650&fm=png&fit=crop",
+      metaTitle,
+      metaDescription,
+      keywords,
+      _type
+    },
+    "slug": slug.current
+  }
+`
