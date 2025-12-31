@@ -11,7 +11,7 @@ export default function TermsOfUse() {
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-white">
-              Iagentsflow.ai
+              Iagentsflow.com
             </Link>
             <span>/</span>
             <span className="text-[#F47F21]">Terms of Use</span>

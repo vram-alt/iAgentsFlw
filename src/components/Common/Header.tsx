@@ -221,14 +221,12 @@ const Header = () => {
                 <Link href="/partners" className="block text-white hover:text-[#0080FF] transition-colors">
                   Partners
                 </Link>
-                <a 
-                  href="https://blog.iagentsflow.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <Link
+                  href="/blog" 
                   className="block text-white hover:text-[#0080FF] transition-colors"
                 >
                   Blog
-                </a>
+                </Link>
                 <div className="space-y-2">
                   <div className="text-gray-400 text-sm font-medium">About Us</div>
                   <Link href="/about" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
