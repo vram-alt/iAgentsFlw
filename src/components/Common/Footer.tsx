@@ -87,6 +87,8 @@ const Footer = () => {
               <li><a href="https://AgentsFlow.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">About</a></li>
               <li><Link href="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
               <li><Link href="/partners" className="hover:text-foreground transition-colors">Partners</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-use" className="hover:text-foreground transition-colors">Terms of Use</Link></li>
             </ul>
           </div>
 
