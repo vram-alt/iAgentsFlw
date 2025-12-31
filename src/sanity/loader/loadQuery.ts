@@ -10,6 +10,9 @@ import {
   postsByCategorySlugQuery,
   postBySlugQuery,
   pagesBySlugQuery,
+  allYouTubeVideosQuery,
+  allYouTubeVideoCategoriesQuery,
+  youtubeVideosByCategorySlugQuery,
 } from '@/sanity/lib/queries'
 
 import { token } from '@/sanity/lib/token'
@@ -89,5 +92,29 @@ export function loadPage(slug: string) {
     pagesBySlugQuery,
     { slug },
     { next: { tags: [`page:${slug}`] } },
+  )
+}
+
+export function loadAllYouTubeVideos() {
+  return loadQuery(
+    allYouTubeVideosQuery,
+    {},
+    { next: { tags: ['youtubeVideo'] } },
+  )
+}
+
+export function loadAllYouTubeVideoCategories() {
+  return loadQuery(
+    allYouTubeVideoCategoriesQuery,
+    {},
+    { next: { tags: ['youtubeVideoCategory'] } },
+  )
+}
+
+export function loadYouTubeVideosByCategorySlug(slug: string) {
+  return loadQuery(
+    youtubeVideosByCategorySlugQuery,
+    { slug },
+    { next: { tags: ['youtubeVideo', `youtubeVideoCategory:${slug}`] } },
   )
 }

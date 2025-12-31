@@ -193,6 +193,10 @@ export const pageStructure = (
     items.push(S.documentTypeListItem('blogCategory').title('Blog Categories'))
     items.push(S.divider())
     items.push(S.documentTypeListItem('author').title('Blog Authors'))
+    items.push(S.divider())
+    items.push(S.documentTypeListItem('youtubeVideo').title('YouTube Videos'))
+    items.push(S.divider())
+    items.push(S.documentTypeListItem('youtubeVideoCategory').title('YouTube Video Categories'))
 
     return S.list()
       .title('Content')

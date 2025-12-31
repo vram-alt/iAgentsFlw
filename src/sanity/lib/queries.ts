@@ -154,3 +154,46 @@ export const pagesBySlugQuery = groq`
     "slug": slug.current
   }
 `
+
+export const allYouTubeVideosQuery = groq`
+  *[_type == "youtubeVideo" && !(_id in path("drafts.**"))] | order(publishedAt desc) {
+    _id,
+    title,
+    "id": youtubeId,
+    youtubeId,
+    description,
+    publishedAt,
+    featured,
+    "category": category->{
+      _id,
+      title,
+      "slug": slug.current
+    }
+  }
+`
+
+export const allYouTubeVideoCategoriesQuery = groq`
+  *[_type == "youtubeVideoCategory" && !(_id in path("drafts.**"))] | order(title asc) {
+    _id,
+    title,
+    "slug": slug.current,
+    description
+  }
+`
+
+export const youtubeVideosByCategorySlugQuery = groq`
+  *[_type == "youtubeVideo" && !(_id in path("drafts.**")) && category->slug.current == $slug] | order(publishedAt desc) {
+    _id,
+    title,
+    "id": youtubeId,
+    youtubeId,
+    description,
+    publishedAt,
+    featured,
+    "category": category->{
+      _id,
+      title,
+      "slug": slug.current
+    }
+  }
+`
