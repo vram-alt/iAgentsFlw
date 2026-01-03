@@ -101,10 +101,8 @@ const HeroSection = () => {
                                     <div>
                                         <h3 className="font-semibold mb-2">Office Address</h3>
                                         <p className="text-gray-300">
-                                            AgentsFlow Technologies<br />
-                                            123 Business Avenue<br />
-                                            San Francisco, CA 94105<br />
-                                            United States
+                                            AgentsFlow<br />
+                                            Lewes, Delaware, USA
                                         </p>
                                     </div>
                                 </div>
@@ -117,8 +115,8 @@ const HeroSection = () => {
                                     <div>
                                         <h3 className="font-semibold mb-2">Phone</h3>
                                         <p className="text-gray-300">
-                                            +1 (555) 123-4567<br />
-                                            Toll Free: +1 (800) 123-4567
+                                            1800 211 8050<br />
+                                            {/* Toll Free: +1 (800) 123-4567 */}
                                         </p>
                                     </div>
                                 </div>
@@ -131,15 +129,15 @@ const HeroSection = () => {
                                     <div>
                                         <h3 className="font-semibold mb-2">Email</h3>
                                         <p className="text-gray-300">
-                                            General: info@AgentsFlow.ai<br />
-                                            Sales: sales@AgentsFlow.ai<br />
-                                            Support: support@AgentsFlow.ai
+                                            General: Hello@iagentsflow.com<br />
+                                            {/* Sales: sales@AgentsFlow.ai<br />
+                                            Support: support@AgentsFlow.ai */}
                                         </p>
                                     </div>
                                 </div>
 
                                 {/* Business Hours */}
-                                <div className="flex items-start space-x-4">
+                                {/* <div className="flex items-start space-x-4">
                                     <div className="w-12 h-12 bg-[#F47F21]/20 rounded-lg flex items-center justify-center flex-shrink-0">
                                         <Clock className="w-6 h-6 text-[#F47F21]" />
                                     </div>
@@ -151,12 +149,12 @@ const HeroSection = () => {
                                             Sunday: Closed
                                         </p>
                                     </div>
-                                </div>
+                                </div> */}
                             </CardContent>
                         </Card>
 
                         {/* Additional Info Card */}
-                        <Card className="bg-gradient-to-br from-[#F47F21]/20 to-[#FF6B35]/20 border-[#F47F21]/50">
+                        {/* <Card className="bg-gradient-to-br from-[#F47F21]/20 to-[#FF6B35]/20 border-[#F47F21]/50">
                             <CardContent className="p-8">
                                 <h3 className="text-xl font-bold mb-4">Need Immediate Support?</h3>
                                 <p className="text-gray-300 mb-6">
@@ -169,7 +167,7 @@ const HeroSection = () => {
                                     Visit Support Center
                                 </Button>
                             </CardContent>
-                        </Card>
+                        </Card> */}
                     </motion.div>
 
                     {/* Right Side - Contact Form */}
