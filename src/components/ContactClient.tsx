@@ -102,7 +102,7 @@ const ContactClient = () => {
                       <MapPin className="w-6 h-6 text-[#F47F21]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-2">Office Address</h3>
+                      {/* <h3 className="font-semibold mb-2">Office Address</h3> */}
                       <p className="text-gray-300">
                         AgentsFlow Technologies<br />
                         123 Business Avenue<br />
@@ -118,7 +118,7 @@ const ContactClient = () => {
                       <Phone className="w-6 h-6 text-[#F47F21]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-2">Phone</h3>
+                      {/* <h3 className="font-semibold mb-2">Phone</h3> */}
                       <p className="text-gray-300">
                         +1 (555) 123-4567<br />
                         Toll Free: +1 (800) 123-4567
@@ -132,9 +132,9 @@ const ContactClient = () => {
                       <Mail className="w-6 h-6 text-[#F47F21]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-2">Email</h3>
+                      {/* <h3 className="font-semibold mb-2">Email</h3> */}
                       <p className="text-gray-300">
-                        General: info@AgentsFlow.ai<br />
+                        info@AgentsFlow.ai<br />
                         Sales: sales@AgentsFlow.ai<br />
                         Support: support@AgentsFlow.ai
                       </p>
