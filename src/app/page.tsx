@@ -26,8 +26,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return seoGenerateMetadata({
-    title: 'AI Governance Platform with Azure Guardrails | AgentsFlow AI',
-    description: 'AI governance platform with Azure guardrails that strengthens compliance, reduces risk, protects data, and ensures secure and responsible AI operations.',
+    title: 'ATrusted partner, Enterprise AI Governance & Responsible AI| Gaurdrails Management | Agents Change Management | Observability |Security & Data privacy',
+    description: 'AI governance platform with Guardrails that strengthens compliance, reduces risk, protects data, and ensures secure and responsible AI operations.',
     keywords: ['azure guardrails', 'AI governance', 'compliance', 'enterprise AI'],
     url: pageUrl,
     imageUrl: '/AgentsFlow-logo.png',
