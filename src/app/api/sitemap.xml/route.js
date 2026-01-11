@@ -20,6 +20,7 @@ export async function GET() {
     // Define static pages
     const staticPages = [
       { url: `${SITE_URL}/` },
+      { url: `${SITE_URL}/blog` },
     ];
 
     // Generate dynamic URLs
