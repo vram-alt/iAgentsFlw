@@ -1,45 +1,39 @@
-import { client } from '@/lib/sanity'
-import { getSiteUrl } from '@/lib/site-url'
+import { groq } from "next-sanity";
+import { client } from '@/sanity/lib/client'
 
-const SITE_URL = getSiteUrl()
+const SITE_URL = `https://iagentsflow.com`; // Change this to your actual domain
 
-// Query to fetch all blog posts with slugs
-const postsQuery = `
-  *[_type == "post" && defined(slug.current)] {
+const query = groq`
+  *[_type in ["page", "post", "blogCategory"]] {
     "slug": slug.current,
-    _updatedAt,
-    publishedAt
+    _type,
+    _updatedAt
   }
-`
-
+`;
 export async function GET() {
   try {
-    // Fetch all blog posts
-    const posts = await client.fetch(postsQuery)
+    const items = await client.fetch(query);
 
-    // Filter out any posts without slugs (safety check)
-    const validPosts = posts.filter(post => post.slug && post.slug !== ':slug')
+    const sortedItems = items.sort((a, b) => a._type.localeCompare(b._type));
+
 
     // Define static pages
     const staticPages = [
       { url: `${SITE_URL}/` },
-      { url: `${SITE_URL}/blog` },
-      { url: `${SITE_URL}/services` },
-      { url: `${SITE_URL}/about` },
-      { url: `${SITE_URL}/contact` },
-      { url: `${SITE_URL}/partners` },
-      { url: `${SITE_URL}/industries` },
-      { url: `${SITE_URL}/platforms` },
-    ]
+    ];
 
-    // Generate dynamic URLs for blog posts
-    const dynamicPages = validPosts.map((post) => {
-      const lastMod = post._updatedAt || post.publishedAt || new Date().toISOString()
+    // Generate dynamic URLs
+    const dynamicPages = sortedItems
+    .map((item) => {
+      let path = item.slug;
+      if (item._type === "page") path = `${item.slug}`;
+      if (item._type === "post") path = `blog/${item.slug}`;
+      
       return {
-        url: `${SITE_URL}/blog/${post.slug}`,
-        lastMod: new Date(lastMod).toISOString(),
-      }
-    })
+        url: `${SITE_URL}/${path}`,
+        lastMod: new Date(item._updatedAt).toISOString(),
+      };
+    });
 
     // Generate XML
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

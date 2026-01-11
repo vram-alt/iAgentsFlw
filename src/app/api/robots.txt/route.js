@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const SITE_URL = `https://iagentsflow.com`;
 
 export function GET() {
   const isDev = SITE_URL.includes("localhost") || SITE_URL.includes("beingbuilt.org");

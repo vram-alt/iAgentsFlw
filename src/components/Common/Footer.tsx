@@ -84,8 +84,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Company</h4>
             <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
-              <li><a href="https://AgentsFlow.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">About</a></li>
+              <li><Link href="/about" className="hover:text-foreground transition-colors">About</Link></li>
               <li><Link href="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
+              
               <li><Link href="/partners" className="hover:text-foreground transition-colors">Partners</Link></li>
               <li><Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms-of-use" className="hover:text-foreground transition-colors">Terms of Use</Link></li>
@@ -95,6 +96,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Resources</h4>
             <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+            <li><Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
               <li><Link href="/resources/state-of-enterprise" className="hover:text-foreground transition-colors">State of Enterprise</Link></li>
               <li><Link href="/services" className="hover:text-foreground transition-colors">All Services</Link></li>
             </ul>

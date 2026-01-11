@@ -15,7 +15,18 @@ const nextConfig = {
   trailingSlash: false,
   
   async redirects() {
-    return [];
+    return [
+      {
+        source: '/tools/AgentsFlow',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/managed-services',
+        destination: '/managed-services/spend-management',
+        permanent: true,
+      },
+    ];
   },
 
   async rewrites() {

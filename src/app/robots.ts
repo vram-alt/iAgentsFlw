@@ -27,7 +27,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: `${siteUrl}/sitemap.xml`,
+    sitemap: `https://iagentsflow.com/sitemap.xml`,
   }
 }
 
