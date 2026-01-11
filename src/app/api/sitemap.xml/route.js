@@ -29,7 +29,6 @@ export async function GET() {
       let path = item.slug;
       if (item._type === "page") path = `${item.slug}`;
       if (item._type === "post") path = `blog/${item.slug}`;
-      
       return {
         url: `${SITE_URL}/${path}`,
         lastMod: new Date(item._updatedAt).toISOString(),

@@ -21,7 +21,6 @@ const Footer = () => {
               Leading AI compliance and governance platform for enterprises.
             </p>
           </div>
-          
           <div>
             <h4 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Products</h4>
             <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
@@ -32,7 +31,6 @@ const Footer = () => {
               <li><Link href="/tools/iprivacyhub" className="hover:text-foreground transition-colors">iPrivacyHub</Link></li> */}
             </ul>
           </div>
-          
           <div>
             <h4 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Solutions</h4>
             <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
@@ -60,7 +58,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
         <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8 mt-6 sm:mt-8">
           <div>
             <h4 className="font-semibold text-sm sm:text-base mb-3 sm:mb-4">Managed Services</h4>
@@ -86,7 +83,6 @@ const Footer = () => {
             <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
               <li><Link href="/about" className="hover:text-foreground transition-colors">About</Link></li>
               <li><Link href="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
-              
               <li><Link href="/partners" className="hover:text-foreground transition-colors">Partners</Link></li>
               <li><Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms-of-use" className="hover:text-foreground transition-colors">Terms of Use</Link></li>
