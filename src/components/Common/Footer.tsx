@@ -111,7 +111,7 @@ const Footer = () => {
               <li>
                 <a 
                   target="_blank" 
-                  href="https://www.facebook.com/AgentsFlow/" 
+                  href="https://www.facebook.com/profile.php?id=61586195077581" 
                   title="Facebook"
                   className="flex items-center justify-center w-10 h-10 bg-white rounded-full hover:opacity-80 transition-opacity"
                 >
@@ -123,7 +123,7 @@ const Footer = () => {
               <li>
                 <a 
                   target="_blank" 
-                  href="https://twitter.com/AgentsFlow" 
+                  href="https://x.com/iAgentsFlow" 
                   title="Twitter"
                   className="flex items-center justify-center w-10 h-10 bg-white rounded-full hover:opacity-80 transition-opacity"
                 >
@@ -137,7 +137,7 @@ const Footer = () => {
               <li>
                 <a 
                   target="_blank" 
-                  href="https://www.linkedin.com/company/AgentsFlow/" 
+                  href="https://www.linkedin.com/company/iagentsflow" 
                   title="Linkedin"
                   className="flex items-center justify-center w-10 h-10 bg-white rounded-full hover:opacity-80 transition-opacity"
                 >
@@ -161,7 +161,7 @@ const Footer = () => {
               <li>
                 <a 
                   target="_blank" 
-                  href="https://www.instagram.com/AgentsFlowofficial/" 
+                  href="https://www.instagram.com/iagentsflow/" 
                   title="Instagram"
                   className="flex items-center justify-center w-10 h-10 bg-white rounded-full hover:opacity-80 transition-opacity"
                 >
