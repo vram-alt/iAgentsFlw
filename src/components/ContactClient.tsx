@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from "@emailjs/browser";
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -28,58 +29,99 @@ const ContactClient = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    const today = new Date().toLocaleDateString("en-US", {
+      month: "long",
+      day: "2-digit",
+      year: "numeric",
+    });
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        role: formData.role,
+        message: formData.message,
+        serviceInterest: formData.serviceInterest.join(", "),
+        today,
+      };
+
+      try {
+      await emailjs.send(
+        'service_n80u5ue',
+        'template_g03baru',
+        templateParams,
+        'aXwBdP85dhlGKcFYm'
+      );
+
+      
+      setSubmitSuccess(true);
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        role: "",
+        message: "",
+        serviceInterest: [],
+      });
+
+      setTimeout(() => setSubmitSuccess(false), 3000);
+    } catch (err) {
+      console.error("Email send error:", err);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
     
     // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
+    // setTimeout(() => {
+    //   console.log('Form submitted:', formData);
+    //   setIsSubmitting(false);
+    //   setSubmitSuccess(true);
       
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          role: '',
-          message: '',
-          serviceInterest: []
-        });
-        setSubmitSuccess(false);
-      }, 3000);
-    }, 1500);
+    //   // Reset form after 3 seconds
+    //   setTimeout(() => {
+    //     setFormData({
+    //       name: '',
+    //       email: '',
+    //       company: '',
+    //       role: '',
+    //       message: '',
+    //       serviceInterest: []
+    //     });
+    //     setSubmitSuccess(false);
+    //   }, 3000);
+    // }, 1500);
   };
 
   return (
     <div className="min-h-screen bg-[#0A0F1A] text-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="relative overflow-hidden pb-16 pt-32">
         <div className="absolute inset-0 bg-gradient-to-br from-[#F47F21]/5 via-transparent to-[#FF6B35]/5" />
         
-        <div className="container mx-auto px-4 sm:px-6 relative">
+        <div className="container relative mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center space-y-6 mb-16"
+            className="mb-16 space-y-6 text-center"
           >
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-5xl font-bold leading-tight lg:text-6xl">
               Get in{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F47F21] to-[#FF6B35]">
+              <span className="bg-gradient-to-r from-[#F47F21] to-[#FF6B35] bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
             
-            <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-300">
               Ready to transform your AI governance and compliance? Let&apos;s talk about how we can help.
             </p>
           </motion.div>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
+          <div className="mx-auto grid max-w-7xl items-start gap-12 lg:grid-cols-2">
             {/* Left Side - Company Information */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -87,22 +129,22 @@ const ContactClient = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8"
             >
-              <Card className="bg-[#0F172A]/50 backdrop-blur-md border-white/10">
-                <CardContent className="p-8 space-y-6">
+              <Card className="border-white/10 bg-[#0F172A]/50 backdrop-blur-md">
+                <CardContent className="space-y-6 p-8">
                   <div>
-                    <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-                    <p className="text-gray-300 mb-8">
+                    <h2 className="mb-6 text-2xl font-bold">Contact Information</h2>
+                    <p className="mb-8 text-gray-300">
                       We&apos;re here to help you navigate AI governance, privacy compliance, and enterprise security.
                     </p>
                   </div>
 
                   {/* Address */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-[#F47F21]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-[#F47F21]" />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#F47F21]/20">
+                      <MapPin className="h-6 w-6 text-[#F47F21]" />
                     </div>
                     <div>
-                      {/* <h3 className="font-semibold mb-2">Office Address</h3> */}
+                      {/* <h3 className="mb-2 font-semibold">Office Address</h3> */}
                       <p className="text-gray-300">
                         AgentsFlow Technologies<br />
                         123 Business Avenue<br />
@@ -114,11 +156,11 @@ const ContactClient = () => {
 
                   {/* Phone */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-[#F47F21]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-[#F47F21]" />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#F47F21]/20">
+                      <Phone className="h-6 w-6 text-[#F47F21]" />
                     </div>
                     <div>
-                      {/* <h3 className="font-semibold mb-2">Phone</h3> */}
+                      {/* <h3 className="mb-2 font-semibold">Phone</h3> */}
                       <p className="text-gray-300">
                         +1 (555) 123-4567<br />
                         Toll Free: +1 (800) 123-4567
@@ -128,11 +170,11 @@ const ContactClient = () => {
 
                   {/* Email */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-[#F47F21]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-[#F47F21]" />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#F47F21]/20">
+                      <Mail className="h-6 w-6 text-[#F47F21]" />
                     </div>
                     <div>
-                      {/* <h3 className="font-semibold mb-2">Email</h3> */}
+                      {/* <h3 className="mb-2 font-semibold">Email</h3> */}
                       <p className="text-gray-300">
                         info@AgentsFlow.ai<br />
                         Sales: sales@AgentsFlow.ai<br />
@@ -143,11 +185,11 @@ const ContactClient = () => {
 
                   {/* Business Hours */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-[#F47F21]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-[#F47F21]" />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#F47F21]/20">
+                      <Clock className="h-6 w-6 text-[#F47F21]" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-2">Business Hours</h3>
+                      <h3 className="mb-2 font-semibold">Business Hours</h3>
                       <p className="text-gray-300">
                         Monday - Friday: 9:00 AM - 6:00 PM PST<br />
                         Saturday: 10:00 AM - 4:00 PM PST<br />
@@ -159,10 +201,10 @@ const ContactClient = () => {
               </Card>
 
               {/* Additional Info Card */}
-              <Card className="bg-gradient-to-br from-[#F47F21]/20 to-[#FF6B35]/20 border-[#F47F21]/50">
+              <Card className="border-[#F47F21]/50 bg-gradient-to-br from-[#F47F21]/20 to-[#FF6B35]/20">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-bold mb-4">Need Immediate Support?</h3>
-                  <p className="text-gray-300 mb-6">
+                  <h3 className="mb-4 text-xl font-bold">Need Immediate Support?</h3>
+                  <p className="mb-6 text-gray-300">
                     For urgent matters or existing customer support, please reach out through your dedicated support channel or call our priority hotline.
                   </p>
                   <Button 
@@ -181,20 +223,20 @@ const ContactClient = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Card className="bg-[#0F172A]/50 backdrop-blur-md border-white/10">
+              <Card className="border-white/10 bg-[#0F172A]/50 backdrop-blur-md">
                 <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+                  <h2 className="mb-6 text-2xl font-bold">Send us a Message</h2>
                   
                   {submitSuccess ? (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      className="text-center py-12"
+                      className="py-12 text-center"
                     >
-                      <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <CheckCircle className="w-10 h-10 text-green-400" />
+                      <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-green-500/20">
+                        <CheckCircle className="h-10 w-10 text-green-400" />
                       </div>
-                      <h3 className="text-2xl font-bold mb-2 text-green-400">Message Sent!</h3>
+                      <h3 className="mb-2 text-2xl font-bold text-green-400">Message Sent!</h3>
                       <p className="text-gray-300">
                         Thank you for reaching out. We&apos;ll get back to you within 24 hours.
                       </p>
@@ -204,7 +246,7 @@ const ContactClient = () => {
                       <div className="grid grid-cols-2 gap-4">
                         <Input
                           placeholder="Name"
-                          className="bg-white/5 border-white/10"
+                          className="border-white/10 bg-white/5"
                           value={formData.name}
                           onChange={(e) => setFormData({...formData, name: e.target.value})}
                           required
@@ -212,7 +254,7 @@ const ContactClient = () => {
                         <Input
                           type="email"
                           placeholder="Email"
-                          className="bg-white/5 border-white/10"
+                          className="border-white/10 bg-white/5"
                           value={formData.email}
                           onChange={(e) => setFormData({...formData, email: e.target.value})}
                           required
@@ -221,14 +263,14 @@ const ContactClient = () => {
                       <div className="grid grid-cols-2 gap-4">
                         <Input
                           placeholder="Company"
-                          className="bg-white/5 border-white/10"
+                          className="border-white/10 bg-white/5"
                           value={formData.company}
                           onChange={(e) => setFormData({...formData, company: e.target.value})}
                           required
                         />
                         <Input
                           placeholder="Role"
-                          className="bg-white/5 border-white/10"
+                          className="border-white/10 bg-white/5"
                           value={formData.role}
                           onChange={(e) => setFormData({...formData, role: e.target.value})}
                           required
@@ -236,7 +278,7 @@ const ContactClient = () => {
                       </div>
                       
                       <div>
-                        <label className="block text-sm font-medium mb-2">Service Interest</label>
+                        <label className="mb-2 block text-sm font-medium">Service Interest</label>
                         <div className="space-y-2">
                           {['Assessment', 'Managed Governance', 'Audit Readiness'].map(service => (
                             <div key={service} className="flex items-center space-x-2">
@@ -258,7 +300,7 @@ const ContactClient = () => {
 
                       <Textarea
                         placeholder="Tell us about your current challenges..."
-                        className="bg-white/5 border-white/10"
+                        className="border-white/10 bg-white/5"
                         value={formData.message}
                         onChange={(e) => setFormData({...formData, message: e.target.value})}
                         rows={3}
@@ -271,7 +313,7 @@ const ContactClient = () => {
                       >
                         {isSubmitting ? (
                           <>
-                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                            <div className="mr-2 h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
                             Sending...
                           </>
                         ) : (
@@ -288,12 +330,12 @@ const ContactClient = () => {
       </section>
 
       {/* Map Section (Optional) */}
-      <section className="py-16 bg-[#0F172A]/30">
+      <section className="bg-[#0F172A]/30 py-16">
         <div className="container mx-auto px-4 sm:px-6">
-          <Card className="bg-[#172135] backdrop-blur-md border-white/10 overflow-hidden">
-            <div className="aspect-video bg-gradient-to-br from-[#F47F21]/10 to-[#FF6B35]/10 flex items-center justify-center">
+          <Card className="overflow-hidden border-white/10 bg-[#172135] backdrop-blur-md">
+            <div className="flex aspect-video items-center justify-center bg-gradient-to-br from-[#F47F21]/10 to-[#FF6B35]/10">
               <div className="text-center">
-                <MapPin className="w-16 h-16 text-[#F47F21] mx-auto mb-4" />
+                <MapPin className="mx-auto mb-4 h-16 w-16 text-[#F47F21]" />
                 <p className="text-gray-300">Interactive map coming soon</p>
               </div>
             </div>

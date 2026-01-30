@@ -46,10 +46,10 @@ const today = new Date().toLocaleDateString("en-US", {
 
     try {
       await emailjs.send(
-        'service_c2qz36w',
-        'template_wjc02w4',
+        'service_n80u5ue',
+        'template_g03baru',
         templateParams,
-        'EshlqpZ1b4Shzy4L1'
+        'aXwBdP85dhlGKcFYm'
       );
 
       
