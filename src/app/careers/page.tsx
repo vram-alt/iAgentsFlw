@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import { seoGenerateMetadata } from '@/components/Seo'
@@ -137,13 +136,11 @@ export default function CareersPage() {
 
             {/* Right Illustration */}
             <div className="relative">
-              <div className="relative w-full h-[500px] sm:h-[600px] bg-gradient-to-br from-[#172135] to-[#0F172A] rounded-2xl border-2 border-white/20 p-8 overflow-hidden">
-                <Image
+              <div className="relative w-full h-[500px] sm:h-[600px] bg-gradient-to-br from-[#172135] to-[#0F172A] rounded-2xl border-2 border-white/20 p-8 overflow-hidden flex items-center justify-center">
+                <img
                   src="https://iagentsflow.com/images/careers.png"
                   alt="Careers at AgentsFlow"
-                  fill
-                  className="object-contain"
-                  priority
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             </div>
