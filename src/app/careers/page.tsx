@@ -139,7 +139,7 @@ export default function CareersPage() {
             <div className="relative">
               <div className="relative w-full h-[500px] sm:h-[600px] bg-gradient-to-br from-[#172135] to-[#0F172A] rounded-2xl border-2 border-white/20 p-8 overflow-hidden">
                 <Image
-                  src="/images/careers.png"
+                  src="https://iagentsflow.com/images/careers.png"
                   alt="Careers at AgentsFlow"
                   fill
                   className="object-contain"
