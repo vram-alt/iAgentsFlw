@@ -188,6 +188,8 @@ export const pageStructure = (
     )
 
     items.push(S.divider())
+    items.push(S.documentTypeListItem('job').title('Jobs'))
+    items.push(S.divider())
     items.push(S.documentTypeListItem('post').title('Blog Posts'))
     items.push(S.divider())
     items.push(S.documentTypeListItem('blogCategory').title('Blog Categories'))

@@ -197,3 +197,25 @@ export const youtubeVideosByCategorySlugQuery = groq`
     }
   }
 `
+
+export const allJobsQuery = groq`
+  *[_type == "job" && !(_id in path("drafts.**"))] | order(_createdAt desc) {
+    _id,
+    title,
+    "slug": slug.current,
+    team,
+    location,
+    description
+  }
+`
+
+export const jobBySlugQuery = groq`
+  *[_type == "job" && !(_id in path("drafts.**")) && slug.current == $slug][0] {
+    _id,
+    title,
+    "slug": slug.current,
+    team,
+    location,
+    description
+  }
+`

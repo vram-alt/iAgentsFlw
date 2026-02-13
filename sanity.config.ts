@@ -16,6 +16,7 @@ import post from '@/sanity/schemas/documents/post'
 import blogCategory from '@/sanity/schemas/documents/blogCategory'
 import author from '@/sanity/schemas/documents/author'
 import youtubeVideo, { youtubeVideoCategory } from '@/sanity/schemas/documents/youtubeVideo'
+import job from '@/sanity/schemas/documents/job'
 
 import seo from '@/sanity/schemas/objects/seo'
 import blockContent from '@/sanity/schemas/objects/blockContent'
@@ -44,6 +45,7 @@ export default defineConfig({
       page,
       youtubeVideo,
       youtubeVideoCategory,
+      job,
       //
       // Objects
       

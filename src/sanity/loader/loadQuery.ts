@@ -13,6 +13,8 @@ import {
   allYouTubeVideosQuery,
   allYouTubeVideoCategoriesQuery,
   youtubeVideosByCategorySlugQuery,
+  allJobsQuery,
+  jobBySlugQuery,
 } from '@/sanity/lib/queries'
 
 import { token } from '@/sanity/lib/token'
@@ -116,5 +118,21 @@ export function loadYouTubeVideosByCategorySlug(slug: string) {
     youtubeVideosByCategorySlugQuery,
     { slug },
     { next: { tags: ['youtubeVideo', `youtubeVideoCategory:${slug}`] } },
+  )
+}
+
+export function loadAllJobs() {
+  return loadQuery(
+    allJobsQuery,
+    {},
+    { next: { tags: ['job'] } },
+  )
+}
+
+export function loadJob(slug: string) {
+  return loadQuery(
+    jobBySlugQuery,
+    { slug },
+    { next: { tags: [`job:${slug}`] } },
   )
 }
