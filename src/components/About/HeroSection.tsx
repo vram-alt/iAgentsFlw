@@ -19,7 +19,7 @@ const HeroSection = () => {
                     <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                         About{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F47F21] to-[#FF6B35]">
-                            AgentsFlow.ai
+                            AgentsFlow.com
                         </span>
                     </h1>
 

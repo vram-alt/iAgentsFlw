@@ -138,7 +138,7 @@ const ROIEstimator = () => {
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
           {isLiveMode 
             ? "Watch live simulated savings and ROI calculations based on real enterprise scenarios" 
-            : "Get a personalized estimate of your potential savings and risk reduction with AgentsFlow.ai"
+            : "Get a personalized estimate of your potential savings and risk reduction with AgentsFlow.com"
           }
         </p>
         
@@ -358,7 +358,7 @@ const ROIEstimator = () => {
                       <span className="text-green-400">${results.estimatedSavings.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-muted-foreground">AgentsFlow.ai Annual Cost</span>
+                      <span className="text-muted-foreground">AgentsFlow.com Annual Cost</span>
                       <span>${(results.monthlyFee * 12).toLocaleString()}</span>
                     </div>
                     <div className="border-t border-white/10 pt-2 flex justify-between font-bold">

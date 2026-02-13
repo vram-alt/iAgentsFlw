@@ -18,7 +18,7 @@ const WhoAreWeSection = () => {
                         Who <span className="text-gradient">Are We</span>
                     </h2>
                     <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-2">
-                        InfoComply.ai is a trusted leader in AI governance consulting. Our team of experts helps organizations build and operate AI responsibly—ensuring compliance, reducing risk, and earning customer trust. With deep regulatory expertise and proven governance frameworks, we empower enterprises to confidently navigate complex AI regulations and accelerate responsible AI adoption.
+                    AgentsFlow.com is a trusted leader in AI governance consulting. Our team of experts helps organizations build and operate AI responsibly—ensuring compliance, reducing risk, and earning customer trust. With deep regulatory expertise and proven governance frameworks, we empower enterprises to confidently navigate complex AI regulations and accelerate responsible AI adoption.
                     </p>
                 </motion.div>
 

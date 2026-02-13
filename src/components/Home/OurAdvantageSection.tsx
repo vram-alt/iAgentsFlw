@@ -17,7 +17,7 @@ const OurAdvantageSection = () => {
                         Our <span className="text-gradient">Advantage</span>
                     </h2>
                     <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-                        Why leading enterprises choose InfoComply.ai for their AI governance needs
+                        Why leading enterprises choose AgentsFlow.com for their AI governance needs
                     </p>
                 </motion.div>
 

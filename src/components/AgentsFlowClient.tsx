@@ -1013,7 +1013,7 @@ const AgentsFlowClient = () => {
       <div className="border-b border-white/5 bg-[#0F172A]/30">
         <div className="container mx-auto px-4 py-3 sm:px-6 sm:py-4">
           <div className="flex items-center space-x-2 text-xs text-gray-400 sm:text-sm">
-            <Link href="/" className="hover:text-white">AgentsFlow.ai</Link>
+            <Link href="/" className="hover:text-white">AgentsFlow.com</Link>
             <span>/</span>
             <span className="text-[#F47F21]">AgentsFlow</span>
           </div>
@@ -1572,7 +1572,7 @@ const AgentsFlowClient = () => {
                   <div className="flex items-start space-x-3">
                     <Checkbox className="mt-1" />
                     <label className="text-sm text-gray-300">
-                      I agree to receive updates from AgentsFlow.ai.
+                      I agree to receive updates from AgentsFlow.com.
                       <a href="#" className="ml-1 text-[#F47F21] hover:underline">Privacy Policy</a>
                     </label>
                   </div>

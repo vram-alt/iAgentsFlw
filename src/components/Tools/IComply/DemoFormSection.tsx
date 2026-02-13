@@ -106,7 +106,7 @@ const DemoFormSection = () => {
                   <div className="flex items-start space-x-3">
                     <Checkbox className="mt-1" />
                     <label className="text-sm text-gray-300">
-                      I agree to receive marketing communications from AgentsFlow.ai. 
+                      I agree to receive marketing communications from AgentsFlow.com. 
                       You can unsubscribe at any time. <a href="#" className="text-[#F47F21] hover:underline">Privacy Policy</a>
                     </label>
                   </div>

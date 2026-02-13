@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div className="sm:col-span-2 md:col-span-3 lg:col-span-2">
-            <h3 className="font-display font-bold text-lg sm:text-xl mb-3 sm:mb-4">AgentsFlow.ai</h3>
+            <h3 className="font-display font-bold text-lg sm:text-xl mb-3 sm:mb-4">AgentsFlow.com</h3>
             <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
               Leading AI compliance and governance platform for enterprises.
             </p>

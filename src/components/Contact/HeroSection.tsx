@@ -170,8 +170,8 @@ const HeroSection = () => {
                                         {/* <h3 className="mb-2 font-semibold">Email</h3> */}
                                         <p className="text-gray-300">
                                             Hello@iagentsflow.com<br />
-                                            {/* Sales: sales@AgentsFlow.ai<br />
-                                            Support: support@AgentsFlow.ai */}
+                                            {/* Sales: sales@AgentsFlow.com<br />
+                                            Support: support@AgentsFlow.com */}
                                         </p>
                                     </div>
                                 </div>

@@ -166,7 +166,7 @@ const AboutClient = () => {
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
               About{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F47F21] to-[#FF6B35]">
-                AgentsFlow.ai
+                AgentsFlow.com
               </span>
             </h1>
             
@@ -578,7 +578,7 @@ const AboutClient = () => {
               Ready to Transform Your Compliance?
             </h2>
             <p className="text-xl text-gray-300 mb-10">
-              Join hundreds of enterprises already using AgentsFlow.ai to automate and streamline their compliance processes.
+              Join hundreds of enterprises already using AgentsFlow.com to automate and streamline their compliance processes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

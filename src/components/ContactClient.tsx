@@ -176,9 +176,9 @@ const ContactClient = () => {
                     <div>
                       {/* <h3 className="mb-2 font-semibold">Email</h3> */}
                       <p className="text-gray-300">
-                        info@AgentsFlow.ai<br />
-                        Sales: sales@AgentsFlow.ai<br />
-                        Support: support@AgentsFlow.ai
+                        info@AgentsFlow.com<br />
+                        Sales: sales@AgentsFlow.com<br />
+                        Support: support@AgentsFlow.com
                       </p>
                     </div>
                   </div>

@@ -46,7 +46,7 @@ const HomePageClient = () => {
               Who <span className="text-gradient">Are We</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-2">
-              AgentsFlow.ai is a trusted leader in AI governance consulting. Our team of experts helps organizations build and operate AI responsibly—ensuring compliance, reducing risk, and earning customer trust. With deep regulatory expertise and proven governance frameworks, we empower enterprises to confidently navigate complex AI regulations and accelerate responsible AI adoption.
+              AgentsFlow.com is a trusted leader in AI governance consulting. Our team of experts helps organizations build and operate AI responsibly—ensuring compliance, reducing risk, and earning customer trust. With deep regulatory expertise and proven governance frameworks, we empower enterprises to confidently navigate complex AI regulations and accelerate responsible AI adoption.
             </p>
           </motion.div>
 
@@ -365,7 +365,7 @@ const HomePageClient = () => {
               Our <span className="text-gradient">Advantage</span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-2">
-              Why leading enterprises choose AgentsFlow.ai for their AI governance needs
+              Why leading enterprises choose AgentsFlow.com for their AI governance needs
             </p>
           </motion.div>
 
@@ -456,7 +456,7 @@ const HomePageClient = () => {
               Ready to Transform Your <span className="text-gradient">AI Governance</span>?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12 px-2">
-              Join leading enterprises who trust AgentsFlow.ai to navigate the complex landscape 
+              Join leading enterprises who trust AgentsFlow.com to navigate the complex landscape 
               of AI compliance and governance. Start your journey today.
             </p>
             
