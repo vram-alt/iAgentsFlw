@@ -45,7 +45,7 @@ const FoundersNoteClient = () => {
                   </p>
                   
                   <p className="text-gray-300 text-lg leading-snug">
-                    Over the past few months, we&apos;ve been on an exciting journey of transformation — evolving from our roots in enterprise software into a new chapter centered on AI-driven products that empower organizations to work smarter, faster, and more responsibly.
+                    Over the past few years, we&apos;ve been on an exciting journey of transformation — evolving from our roots in enterprise software into a new chapter centered on AI-driven products that empower organizations to work smarter, faster, and more responsibly.
                   </p>
                   
                   <p className="text-gray-300 text-lg leading-snug">
