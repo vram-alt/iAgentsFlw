@@ -26,7 +26,7 @@ const CTASection = () => {
                             Ready to Transform Your <span className="text-gradient">AI Governance</span>?
                         </h2>
                         <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12 px-2">
-                            Join leading enterprises who trust AgentsFlow.com to navigate the complex landscape
+                            Join leading enterprises who trust AgentsFlow to navigate the complex landscape
                             of AI compliance and governance. Start your journey today.
                         </p>
 
