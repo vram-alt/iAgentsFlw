@@ -97,7 +97,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
         <div className="container mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-white transition-colors">
-              AgentsFlow.com
+              AgentsFlow
             </Link>
             <span>/</span>
             <Link href="/blog" className="hover:text-white transition-colors">

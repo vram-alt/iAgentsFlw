@@ -21,7 +21,7 @@ const CtaSection = () => {
                         Join our growing ecosystem of partners and help shape the future of AI compliance.
                     </p>
                     <p className="text-lg text-muted-foreground mb-8">
-                        Contact us at: <a href="mailto:hello@iagentsflow" className="text-brand-2 hover:underline font-medium">hello@AgentsFlow.com</a>
+                        Contact us at: <a href="mailto:hello@iagentsflow" className="text-brand-2 hover:underline font-medium">hello@agentsflow.com</a>
                     </p>
                     <a href="mailto:hello@iagentsflow" target="_blank" rel="noopener noreferrer">
                         <Button
