@@ -138,7 +138,7 @@ const ROIEstimator = () => {
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
           {isLiveMode 
             ? "Watch live simulated savings and ROI calculations based on real enterprise scenarios" 
-            : "Get a personalized estimate of your potential savings and risk reduction with AgentsFlow.com"
+            : "Get a personalized estimate of your potential savings and risk reduction with AgentsFlow"
           }
         </p>
         

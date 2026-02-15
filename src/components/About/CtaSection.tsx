@@ -21,7 +21,7 @@ const CtaSection = () => {
                         Ready to Transform Your Compliance?
                     </h2>
                     <p className="text-xl text-gray-300 mb-10">
-                        Join hundreds of enterprises already using AgentsFlow.com to automate and streamline their compliance processes.
+                        Join hundreds of enterprises already using AgentsFlow to automate and streamline their compliance processes.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link

@@ -787,7 +787,7 @@ const IComplyClient = () => {
       <div className="bg-[#0F172A]/30 border-b border-white/5">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
-            <a href="/" className="hover:text-white">AgentsFlow.com</a>
+            <a href="/" className="hover:text-white">AgentsFlow</a>
             <span>/</span>
             <a href="/tools/icomply" className="text-[#F47F21]">iComply</a>
           </div>
