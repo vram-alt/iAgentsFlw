@@ -358,7 +358,7 @@ const ROIEstimator = () => {
                       <span className="text-green-400">${results.estimatedSavings.toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-muted-foreground">AgentsFlow.com Annual Cost</span>
+                      <span className="text-muted-foreground">AgentsFlow Annual Cost</span>
                       <span>${(results.monthlyFee * 12).toLocaleString()}</span>
                     </div>
                     <div className="border-t border-white/10 pt-2 flex justify-between font-bold">
