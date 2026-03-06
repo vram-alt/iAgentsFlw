@@ -9,6 +9,7 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 const Header = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -119,19 +120,43 @@ const Header = () => {
             <Link href="/partners" className="text-white hover:text-[#0080FF] transition-colors px-3 py-2 rounded-lg hover:bg-white/5 font-medium">
               Partners
             </Link>
-            {/* Resources - Disabled for now
-            <Link href="/resources/state-of-enterprise" className="text-white hover:text-[#0080FF] transition-colors px-3 py-2 rounded-lg hover:bg-white/5 font-medium">
-              Resources
-            </Link>
-            */}
-            <Link
-              href="/blog" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#0080FF] transition-colors px-3 py-2 rounded-lg hover:bg-white/5 font-medium"
-            >
-              Blog
-            </Link>
+            
+            {/* Resources Dropdown */}
+            <div className="relative"
+                 onMouseEnter={() => setIsResourcesOpen(true)}
+                 onMouseLeave={() => setIsResourcesOpen(false)}>
+              <button className="flex items-center text-white hover:text-[#0080FF] transition-colors px-3 py-2 rounded-lg hover:bg-white/5 font-medium">
+                Resources <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              <AnimatePresence>
+                {isResourcesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-[#0F172A]/95 backdrop-blur-md border-2 border-white/20 rounded-xl p-4 shadow-2xl z-50"
+                  >
+                    <Link href="/blog" className="block p-3 rounded-lg hover:bg-white/10 transition-colors border-b border-white/10 mb-2">
+                      <div className="font-medium text-white">Blog</div>
+                      <div className="text-sm text-gray-400">Latest articles and insights</div>
+                    </Link>
+                    <Link href="/videos" className="block p-3 rounded-lg hover:bg-white/10 transition-colors border-b border-white/10 mb-2">
+                      <div className="font-medium text-white">Videos</div>
+                      <div className="text-sm text-gray-400">Video tutorials and content</div>
+                    </Link>
+                    <Link 
+                      href="https://test1.infocomply.com/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block p-3 rounded-lg hover:bg-white/10 transition-colors"
+                    >
+                      <div className="font-medium text-white">Forum</div>
+                      <div className="text-sm text-gray-400">Community discussions</div>
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             
             {/* About Us Dropdown */}
             <div className="relative"
@@ -221,12 +246,23 @@ const Header = () => {
                 <Link href="/partners" className="block text-white hover:text-[#0080FF] transition-colors">
                   Partners
                 </Link>
-                <Link
-                  href="/blog" 
-                  className="block text-white hover:text-[#0080FF] transition-colors"
-                >
-                  Blog
-                </Link>
+                <div className="space-y-2">
+                  <div className="text-gray-400 text-sm font-medium">Resources</div>
+                  <Link href="/blog" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
+                    Blog
+                  </Link>
+                  <Link href="/videos" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
+                    Videos
+                  </Link>
+                  <Link 
+                    href="https://test1.infocomply.com/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block pl-4 text-white hover:text-[#0080FF] transition-colors"
+                  >
+                    Forum
+                  </Link>
+                </div>
                 <div className="space-y-2">
                   <div className="text-gray-400 text-sm font-medium">About Us</div>
                   <Link href="/about" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
