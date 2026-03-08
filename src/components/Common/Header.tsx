@@ -140,19 +140,19 @@ const Header = () => {
                       <div className="font-medium text-white">Blog</div>
                       <div className="text-sm text-gray-400">Latest articles and insights</div>
                     </Link>
-                    <Link href="/videos" className="block p-3 rounded-lg hover:bg-white/10 transition-colors border-b border-white/10 mb-2">
+                    <Link href="/videos" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
                       <div className="font-medium text-white">Videos</div>
                       <div className="text-sm text-gray-400">Video tutorials and content</div>
                     </Link>
-                    <Link 
-                      href="https://test1.infocomply.com/" 
+                    {/* <Link 
+                      href="http://forum.iagentsflow.com/" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block p-3 rounded-lg hover:bg-white/10 transition-colors"
                     >
                       <div className="font-medium text-white">Forum</div>
                       <div className="text-sm text-gray-400">Community discussions</div>
-                    </Link>
+                    </Link> */}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -254,7 +254,7 @@ const Header = () => {
                     Videos
                   </Link>
                   <Link 
-                    href="https://test1.infocomply.com/" 
+                    href="http://forum.iagentsflow.com/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block pl-4 text-white hover:text-[#0080FF] transition-colors"
