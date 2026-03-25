@@ -32,6 +32,13 @@ export const metadata: Metadata = {
   creator: 'AgentsFlow AI',
   publisher: 'AgentsFlow AI',
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+  },
   alternates: {
     canonical: '/',
   },

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import HomePageClient from '@/components/HomePageClient'
 import { getSiteUrl } from '@/lib/site-url'
 import HomeIndex from '@/components/Home'
 import { seoGenerateMetadata } from '@/components/Seo'

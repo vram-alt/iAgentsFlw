@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Play, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import GetStartedModal from '../GetStartedModal';
+import VideoModal from './VideoModal';
 
 const SplitRevealHero = () => {
   const [dragPosition, setDragPosition] = useState(50);
@@ -133,13 +134,7 @@ const SplitRevealHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Button 
-                size="lg" 
-                className="w-full sm:w-auto bg-[#0080FF] hover:bg-[#0066CC] text-white font-medium px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl group shadow-xl"
-              >
-                <Play className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 group-hover:scale-110 transition-transform" />
-                See Governance in Action
-              </Button>
+             <VideoModal />
               <Button 
                 size="lg" 
                 variant="outline" 
