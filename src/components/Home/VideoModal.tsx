@@ -5,7 +5,7 @@ import { Play, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const YOUTUBE_EMBED =
-  'https://www.youtube.com/embed/IW4J-mpLdos?si=XIRIh5uOOv9WNyCF&autoplay=1&playsinline=1';
+  'https://www.youtube.com/embed/o55fssvXGuI?si=XIRIh5uOOv9WNyCF&autoplay=1&playsinline=1';
 
 const VideoModal = () => {
   const [open, setOpen] = useState(false);
