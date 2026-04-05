@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Play, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -145,6 +146,32 @@ const SplitRevealHero = () => {
                 <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" />
               </Button>
             </motion.div>
+
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+              <motion.span
+                className="text-sm sm:text-base md:text-lg text-white/95 font-normal tracking-tight"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                Introducing AI Governance Co-Pilot for your C-Team
+              </motion.span>
+
+              <motion.span
+                className="inline-block"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <Link
+                  href="/tools/ai-go"
+                  className="text-base font-medium text-white bg-[#0080ff] px-4 py-2 rounded-2xl leading-relaxed transition-colors hover:bg-[#0066cc]"
+                >
+                  Explore AI.GO
+                </Link>
+              </motion.span>
+            </div>
+
           </motion.div>
 
           {/* Right Side - Interactive Split View */}

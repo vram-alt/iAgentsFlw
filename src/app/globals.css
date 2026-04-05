@@ -724,6 +724,91 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  /* Marketing / AI-GO page aliases */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(214 100% 55%), hsl(44 92% 65%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .light .gradient-text {
+    background: linear-gradient(135deg, hsl(214 100% 45%), hsl(214 100% 55%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .glass-card {
+    background: hsl(var(--glass-bg));
+    border: 1px solid hsl(var(--glass-border));
+    backdrop-filter: blur(20px);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .light .glass-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .glow-button {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    box-shadow: 0 0 28px hsl(var(--primary) / 0.35);
+  }
+
+  .glow-button:hover {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.5);
+  }
+
+  .section-glow {
+    position: relative;
+  }
+
+  .section-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse 90% 60% at 50% 0%,
+      hsl(var(--primary) / 0.12),
+      transparent 55%
+    );
+  }
+
+  /* AI.GO page — CSS-only entrance (no JS); respects reduced motion */
+  @keyframes ai-go-fade-in {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 14px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .ai-go-fade-in {
+    opacity: 1;
+  }
+
+  .ai-go-fade-in-delayed {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .ai-go-fade-in {
+      animation: ai-go-fade-in 0.65s ease-out both;
+    }
+
+    .ai-go-fade-in-delayed {
+      animation: ai-go-fade-in 0.65s ease-out 0.15s both;
+    }
+  }
   
   /* Improved Button States */
   .btn-hover-glow:hover {
