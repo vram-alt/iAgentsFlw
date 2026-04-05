@@ -53,9 +53,6 @@ export function seoGenerateMetadata({
     ...(keywords && { keywords }),
     alternates: {
       ...(url && { canonical: url }),
-      languages: {
-        "en-US": siteUrl,
-      },
     },
     openGraph: {
       title,
