@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { ShieldCheck } from 'lucide-react';
 import { controlPlaneBullets } from './data';
 
@@ -32,12 +31,13 @@ export function AiGoControlPlane() {
             aria-label="Control plane dashboard preview"
           >
             <div className="relative aspect-[16/15] w-full overflow-hidden rounded-2xl border border-border/50 bg-card/20 ring-1 ring-border/30">
-              <Image
-                src="/images/ai-go-image.webp"
+              {/* eslint-disable-next-line @next/next/no-img-element -- explicit native img for external asset */}
+              <img
+                src="https://iagentsflow.com/images/ai-go-image.webp"
                 alt="AI.GO control plane dashboard — agents, policies, compliance, and risk in one view"
-                fill
-                className="object-contain object-center"
-                sizes="(min-width: 1024px) min(50vw, 36rem) 100vw"
+                className="absolute inset-0 h-full w-full object-contain object-center"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </aside>

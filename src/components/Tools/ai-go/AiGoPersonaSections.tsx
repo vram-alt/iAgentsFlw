@@ -5,7 +5,7 @@ import { personaSections } from './data';
 export function AiGoPersonaSections() {
   return (
     <div id="stakeholders">
-      {personaSections.map(({ slug, title, icon: Icon, heading, description, bullets, reversed }) => (
+      {personaSections.map(({ slug, title, icon: Icon, heading, description, bullets, reversed, image }) => (
         <section
           key={slug}
           aria-labelledby={`persona-${slug}-heading`}
@@ -35,12 +35,16 @@ export function AiGoPersonaSections() {
                 </ul>
               </div>
               <aside
-                className={`glass-card flex min-h-[240px] flex-col items-center justify-center rounded-2xl p-6 sm:min-h-[280px] sm:p-8 ${reversed ? 'lg:order-1' : ''}`}
+                className={`glass-card relative min-h-[240px] overflow-hidden rounded-2xl sm:min-h-[280px] ${reversed ? 'lg:order-1' : ''}`}
                 aria-label={`${title} dashboard preview`}
               >
-                <Icon className="mb-4 h-14 w-14 text-primary/60 sm:h-16 sm:w-16" aria-hidden />
-                <p className="text-lg font-semibold gradient-text">{title} Dashboard</p>
-                <p className="mt-2 text-sm text-muted-foreground">Tailored governance view</p>
+                <img
+                  src={image}
+                  alt={`${title} governance dashboard preview`}
+                  className="h-full min-h-[240px] w-full object-cover object-center sm:min-h-[280px]"
+                  loading="lazy"
+                  decoding="async"
+                />
               </aside>
             </div>
           </div>

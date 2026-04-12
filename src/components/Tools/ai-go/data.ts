@@ -89,6 +89,7 @@ export type PersonaSection = {
   readonly description: string;
   readonly bullets: readonly string[];
   readonly reversed: boolean;
+  readonly image: string;
 };
 
 export const personaSections: PersonaSection[] = [
@@ -101,6 +102,7 @@ export const personaSections: PersonaSection[] = [
       'Gain complete executive visibility into your AI landscape. Understand AI risk posture, ensure board-level compliance reporting, and drive strategic AI adoption with confidence.',
     bullets: ['Board-ready compliance dashboards', 'Enterprise risk posture at a glance', 'Strategic AI adoption metrics'],
     reversed: false,
+    image: 'https://iagentsflow.com/images/ceo-view.webp',
   },
   {
     slug: 'cios',
@@ -111,6 +113,7 @@ export const personaSections: PersonaSection[] = [
       'Consolidate AI governance across your technology stack. Manage agent sprawl, enforce architectural standards, and maintain operational excellence across all AI deployments.',
     bullets: ['Cross-platform agent management', 'Infrastructure compliance automation', 'Technology stack governance'],
     reversed: true,
+    image: 'https://iagentsflow.com/images/cio-view.webp',
   },
   {
     slug: 'clos',
@@ -121,6 +124,7 @@ export const personaSections: PersonaSection[] = [
       'Stay ahead of evolving AI regulations. Automated compliance mapping to EU AI Act, NIST AI RMF, ISO 42001, and more—with audit-ready documentation always at your fingertips.',
     bullets: ['Multi-framework compliance mapping', 'Automated regulatory reporting', 'Audit trail management'],
     reversed: false,
+    image: 'https://iagentsflow.com/images/clo-view.webp',
   },
   {
     slug: 'cpos',
@@ -131,6 +135,7 @@ export const personaSections: PersonaSection[] = [
       'AgentsFlow accelerates innovation with standardized lifecycles, guardrails, and approval workflows—so your product teams can move fast without breaking compliance.',
     bullets: ['Standardized agent lifecycles', 'Built-in approval workflows', 'Innovation velocity metrics'],
     reversed: true,
+    image: 'https://iagentsflow.com/images/cpo-view.webp',
   },
   {
     slug: 'dpos',
@@ -141,6 +146,7 @@ export const personaSections: PersonaSection[] = [
       'Ensure every AI agent respects data privacy. Track data flows, enforce consent requirements, and maintain GDPR/CCPA compliance across your entire AI ecosystem.',
     bullets: ['Data flow tracking & mapping', 'Consent management integration', 'Privacy impact assessments'],
     reversed: false,
+    image: 'https://iagentsflow.com/images/dpo-view.webp',
   },
 ];
 
