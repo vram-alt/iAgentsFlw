@@ -71,8 +71,7 @@ const nextConfig = {
   // Enable compression for faster response
   compress: true,
   poweredByHeader: false,
-  output: 'standalone',
-  
+
   // Optimize build output
   productionBrowserSourceMaps: false,
 
