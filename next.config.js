@@ -2,6 +2,7 @@
 
 
 const isDev = process.env.NODE_ENV === 'development';
+const isNetlify = process.env.NETLIFY === 'true';
 
 const nextConfig = {
   reactStrictMode: true,
@@ -53,7 +54,7 @@ const nextConfig = {
         hostname: 'via.placeholder.com',
       },
     ],
-    unoptimized: isDev, // 🚀 Disable optimization in dev to skip caching
+    unoptimized: isDev || isNetlify,
     minimumCacheTTL: isDev ? 0 : 60 * 60 * 24, // 0 in dev, 1 day in prod
   },
   
