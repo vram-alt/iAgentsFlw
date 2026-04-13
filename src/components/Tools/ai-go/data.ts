@@ -12,6 +12,7 @@ import {
   Ghost,
   Gavel,
   Lock,
+  TrendingUp,
   UserCheck,
   Users,
 } from 'lucide-react';
@@ -116,6 +117,21 @@ export const personaSections: PersonaSection[] = [
     image: 'https://iagentsflow.com/images/cio-view.webp',
   },
   {
+    slug: 'cfos',
+    title: 'CFOs',
+    icon: TrendingUp,
+    heading: 'Cost Control: Finance gains control over AI spend and ROI',
+    description:
+      'See total AI investment, measure returns by agent and initiative, and drill into cost breakdowns so budgets, forecasts, and board reporting stay grounded in real numbers.',
+    bullets: [
+      'Instant visibility into total AI spend across programs and vendors',
+      'ROI visibility for agents and use cases, including top performers',
+      'On-demand cost breakdowns for planning, chargeback, and governance',
+    ],
+    reversed: false,
+    image: '/images/cfo-view.webp',
+  },
+  {
     slug: 'clos',
     title: 'CLOs',
     icon: Gavel,
@@ -123,7 +139,7 @@ export const personaSections: PersonaSection[] = [
     description:
       'Stay ahead of evolving AI regulations. Automated compliance mapping to EU AI Act, NIST AI RMF, ISO 42001, and more—with audit-ready documentation always at your fingertips.',
     bullets: ['Multi-framework compliance mapping', 'Automated regulatory reporting', 'Audit trail management'],
-    reversed: false,
+    reversed: true,
     image: 'https://iagentsflow.com/images/clo-view.webp',
   },
   {
@@ -134,7 +150,7 @@ export const personaSections: PersonaSection[] = [
     description:
       'AgentsFlow accelerates innovation with standardized lifecycles, guardrails, and approval workflows—so your product teams can move fast without breaking compliance.',
     bullets: ['Standardized agent lifecycles', 'Built-in approval workflows', 'Innovation velocity metrics'],
-    reversed: true,
+    reversed: false,
     image: 'https://iagentsflow.com/images/cpo-view.webp',
   },
   {
@@ -145,7 +161,7 @@ export const personaSections: PersonaSection[] = [
     description:
       'Ensure every AI agent respects data privacy. Track data flows, enforce consent requirements, and maintain GDPR/CCPA compliance across your entire AI ecosystem.',
     bullets: ['Data flow tracking & mapping', 'Consent management integration', 'Privacy impact assessments'],
-    reversed: false,
+    reversed: true,
     image: 'https://iagentsflow.com/images/dpo-view.webp',
   },
 ];
