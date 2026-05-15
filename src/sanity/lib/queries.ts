@@ -199,13 +199,17 @@ export const youtubeVideosByCategorySlugQuery = groq`
 `
 
 export const allJobsQuery = groq`
-  *[_type == "job" && !(_id in path("drafts.**"))] | order(_createdAt desc) {
+  *[_type == "job" && !(_id in path("drafts.**"))] | order(featured desc, _createdAt desc) {
     _id,
     title,
     "slug": slug.current,
+    excerpt,
     team,
     location,
-    description
+    employmentType,
+    workMode,
+    experience,
+    featured
   }
 `
 
@@ -214,8 +218,21 @@ export const jobBySlugQuery = groq`
     _id,
     title,
     "slug": slug.current,
+    excerpt,
     team,
     location,
-    description
+    employmentType,
+    workMode,
+    experience,
+    skills,
+    description,
+    applyUrl,
+    datePosted,
+    validThrough,
+    salaryMin,
+    salaryMax,
+    salaryCurrency,
+    featured,
+    seo
   }
 `
