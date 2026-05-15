@@ -312,7 +312,7 @@ export default async function JobDetailPage({ params }: { params: Promise<{ slug
 
             {/* Apply CTA */}
             <div className="border-t border-white/10 pt-10 text-center">
-              <p className="text-gray-400 mb-4">Ready to apply? We'd love to hear from you.</p>
+              <p className="text-gray-400 mb-4">Ready to apply? We&apos;d love to hear from you.</p>
               <Button
                 asChild
                 className="bg-[#F47F21] hover:bg-[#E06F1A] text-white font-medium px-8 py-6 text-lg rounded-lg shadow-lg transition-colors"
