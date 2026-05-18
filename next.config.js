@@ -26,6 +26,11 @@ const nextConfig = {
         destination: '/managed-services/spend-management',
         permanent: true,
       },
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 
