@@ -22,6 +22,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/tools/agentsflow',
+        destination: '/about',
+        permanent: true,
+      },
+      {
         source: '/managed-services',
         destination: '/managed-services/spend-management',
         permanent: true,

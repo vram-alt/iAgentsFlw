@@ -3,8 +3,32 @@ import { client } from '@/sanity/lib/client'
 
 const SITE_URL = `https://iagentsflow.com`; // Change this to your actual domain
 
+function normalizeSitemapUrl(url) {
+  if (!url) return null;
+
+  const normalized = url.replace(/\/+$/, "");
+  return normalized === SITE_URL ? `${SITE_URL}/` : normalized;
+}
+
+function dedupeSitemapEntries(entries) {
+  const seen = new Set();
+
+  return entries.reduce((uniqueEntries, entry) => {
+    const url = normalizeSitemapUrl(entry.url);
+    if (!url || seen.has(url)) return uniqueEntries;
+
+    seen.add(url);
+    uniqueEntries.push({
+      ...entry,
+      url,
+    });
+
+    return uniqueEntries;
+  }, []);
+}
+
 const query = groq`
-  *[_type in ["page", "post", "blogCategory", "job"] && (!defined(isActive) || isActive == true)] {
+  *[_type in ["page", "post", "job"] && (!defined(isActive) || isActive == true)] {
     "slug": slug.current,
     _type,
     _updatedAt
@@ -67,20 +91,28 @@ export async function GET() {
     // Generate dynamic URLs
     const dynamicPages = sortedItems
     .map((item) => {
-      let path = item.slug;
-      if (item._type === "page") path = `${item.slug}`;
+      if (!item.slug) return null;
+      if (item._type === "page" && ["home", "tools"].includes(item.slug)) return null;
+
+      let path = null;
+      //if (item._type === "page") path = item.slug;
       if (item._type === "post") path = `blog/${item.slug}`;
       if (item._type === "job") path = `careers/${item.slug}`;
+      if (!path) return null;
+
       return {
         url: `${SITE_URL}/${path}`,
         lastMod: new Date(item._updatedAt).toISOString(),
       };
-    });
+    })
+    .filter(Boolean);
+
+    const sitemapEntries = dedupeSitemapEntries([...staticPages, ...dynamicPages]);
 
     // Generate XML
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${[...staticPages, ...dynamicPages]
+      ${sitemapEntries
         .map(({ url, lastMod }) => `
           <url>
             <loc>${url}</loc>

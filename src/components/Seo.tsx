@@ -15,6 +15,17 @@ interface SeoProps {
   imageAlt?: string;
 }
 
+function normalizePageTitle(title?: string): string | undefined {
+  if (!title) return title;
+
+  const normalized = title
+    .replace(/^\s*AgentsFlow AI\s*(?:[-|—]\s*)?/i, "")
+    .replace(/\s*(?:[-|—]\s*)?AgentsFlow AI\s*$/i, "")
+    .trim();
+
+  return normalized || title;
+}
+
 export function seoGenerateMetadata({
   title,
   description,
@@ -30,6 +41,7 @@ export function seoGenerateMetadata({
 }: SeoProps): Metadata {
   const siteUrl = getSiteUrl();
   let metaImageurl = "/og-image.png";
+  const pageTitle = normalizePageTitle(title);
   
   if (imageUrl) {
     metaImageurl = imageUrl;
@@ -43,19 +55,19 @@ export function seoGenerateMetadata({
       url: metaImageurl,
       width: imageWidth,
       height: imageHeight,
-      alt: imageAlt || title || siteName,
+      alt: imageAlt || pageTitle || siteName,
     },
   ];
 
   const metadata: Metadata = {
-    title,
+    title: pageTitle,
     description,
     ...(keywords && { keywords }),
     alternates: {
       ...(url && { canonical: url }),
     },
     openGraph: {
-      title,
+      title: pageTitle,
       description,
       url: url || siteUrl,
       siteName,
@@ -65,7 +77,7 @@ export function seoGenerateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: pageTitle,
       description,
       images: metaImageurl,
     },
@@ -73,4 +85,3 @@ export function seoGenerateMetadata({
 
   return metadata;
 }
-

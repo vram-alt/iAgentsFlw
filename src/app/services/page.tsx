@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return seoGenerateMetadata({
-    title: 'AI Governance Services - Assessment & Managed Services | AgentsFlow AI',
+    title: 'AI Governance Services - Assessment & Managed Services',
     description: 'Comprehensive AI governance services including assessments, managed services, advisory architecture, and audit readiness.',
     url: pageUrl,
   })

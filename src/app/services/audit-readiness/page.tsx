@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return seoGenerateMetadata({
-    title: 'Audit Readiness - Prepare for Regulatory Audits | AgentsFlow AI',
+    title: 'Audit Readiness - Prepare for Regulatory Audits',
     description: 'Prepare your organization for regulatory audits with comprehensive documentation, evidence collection, and expert guidance to ensure compliance confidence.',
     url: pageUrl,
   })

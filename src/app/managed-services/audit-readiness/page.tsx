@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return seoGenerateMetadata({
-    title: 'Audit Readiness - Managed Services | AgentsFlow AI',
+    title: 'Audit Readiness - Managed Services',
     description: 'Managed audit readiness and evidence collection for AI compliance audits.',
     url: pageUrl,
   })
