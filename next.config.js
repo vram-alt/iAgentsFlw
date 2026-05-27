@@ -14,25 +14,25 @@ const nextConfig = {
   // Optimize initial page load by reducing redirects processing time
   trailingSlash: false,
   
-  async redirects() {
-    return [
-      {
-        source: '/managed-services',
-        destination: '/managed-services/spend-management',
-        permanent: true,
-      },
-      {
-        source: '/tools',
-        destination: '/tools/agentsflow',
-        permanent: true,
-      },
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/managed-services',
+  //       destination: '/managed-services/spend-management',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/tools',
+  //       destination: '/tools/agentsflow',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/home',
+  //       destination: '/',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 
   async rewrites() {
     return [
