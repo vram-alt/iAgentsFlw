@@ -23,7 +23,7 @@ function normalizePageTitle(title?: string): string | undefined {
     .replace(/\s*(?:[-|—]\s*)?AgentsFlow AI\s*$/i, "")
     .trim();
 
-  return normalized || title;
+  return title;
 }
 
 function normalizeOpenGraphImageUrl(imageUrl: string, width: number, height: number): string {
