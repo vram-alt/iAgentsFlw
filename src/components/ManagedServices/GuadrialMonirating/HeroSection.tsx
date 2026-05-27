@@ -64,7 +64,7 @@ const HeroSection =()=>{
                 className="border-[#F47F21] text-[#F47F21] hover:bg-[#F47F21] hover:text-white"
                 asChild
               >
-                <Link href="/services/managed-services">View All Services</Link>
+                <Link href="/managed-services">View All Services</Link>
               </Button>
             </div>
           </motion.div>

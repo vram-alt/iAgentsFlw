@@ -1572,7 +1572,7 @@ const IComplyClient = () => {
               <h3 className="text-lg sm:text-xl font-bold mb-2">Need AI Governance for Your Models & Agents?</h3>
               <p className="text-sm sm:text-base text-gray-300">Complete your compliance with AgentsFlow—real-time AI system tracking for automated evidence generation</p>
             </div>
-            <Link href="/tools/AgentsFlow" className="w-full sm:w-auto">
+            <Link href="/tools/agentsflow" className="w-full sm:w-auto">
               <Button className="w-full sm:w-auto bg-[#F47F21] hover:bg-[#F47F21]/90 text-white">
                 Explore AgentsFlow →
               </Button>

@@ -18,17 +18,17 @@ const nextConfig = {
     return [
       {
         source: '/tools/AgentsFlow',
-        destination: '/about',
-        permanent: true,
-      },
-      {
-        source: '/tools/agentsflow',
-        destination: '/about',
+        destination: '/tools/agentsflow',
         permanent: true,
       },
       {
         source: '/managed-services',
         destination: '/managed-services/spend-management',
+        permanent: true,
+      },
+      {
+        source: '/tools',
+        destination: '/tools/agentsflow',
         permanent: true,
       },
       {

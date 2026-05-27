@@ -20,6 +20,31 @@ const sora = Sora({
 })
 
 const siteUrl = getSiteUrl()
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: 'AgentsFlow AI',
+      url: `${siteUrl}/`,
+      logo: `${siteUrl}/images/logo.webp`,
+      sameAs: [
+        'https://www.linkedin.com/company/iagentsflow',
+        'https://x.com/iAgentsFlow',
+        'https://www.youtube.com/@AigentsFlow',
+        'https://www.facebook.com/profile.php?id=61586195077581',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: 'AgentsFlow AI',
+      publisher: { '@id': `${siteUrl}/#organization` },
+    },
+  ],
+}
 
 export const metadata: Metadata = {
   title: {
@@ -101,6 +126,12 @@ export default function RootLayout({
             gtag('config', 'G-M0NYL8WEQN');
           `}
         </Script>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <Providers>
           <Header />
           <main className="pt-18">

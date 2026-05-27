@@ -13,7 +13,7 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   
-  const isAgentsFlowRoute = pathname?.includes('/tools/AgentsFlow');
+  const isAgentsFlowRoute = pathname?.includes('/tools/agentsflow');
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 !bg-[#0A0F1A]/95 backdrop-blur-md border-b border-white/10 shadow-xl">
@@ -85,7 +85,7 @@ const Navigation = () => {
                     exit={{ opacity: 0, y: 10 }}
                     className="absolute top-full left-0 mt-2 w-64 bg-[#0F172A]/95 backdrop-blur-md border-2 border-white/20 rounded-xl p-4 shadow-2xl z-50"
                   >
-                    <Link href="/tools/AgentsFlow" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
+                    <Link href="/tools/agentsflow" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
                       <div className="font-medium text-white">AgentsFlow</div>
                       <div className="text-sm text-gray-400">Enterprise Apps&AI Governance and management software</div>
                     </Link>
@@ -93,7 +93,7 @@ const Navigation = () => {
                       <div className="font-medium text-white">iComply</div>
                       <div className="text-sm text-gray-400">Intelligent compliance automation</div>
                     </Link>
-                    <Link href="/tools/AgentsFlow" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
+                    <Link href="/tools/agentsflow" className="block p-3 rounded-lg hover:bg-white/10 transition-colors">
                       <div className="font-medium text-white">AgentsFlow</div>
                       <div className="text-sm text-gray-400">Production-safe AI agents for enterprise</div>
                     </Link>
@@ -162,13 +162,13 @@ const Navigation = () => {
                 </div>
                 <div className="space-y-2">
                   <div className="text-gray-400 text-sm font-medium">Tools</div>
-                  <Link href="/tools/AgentsFlow" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
+                  <Link href="/tools/agentsflow" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
                     AgentsFlow
                   </Link>
                   <Link href="/tools/icomply" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
                     iComply
                   </Link>
-                  <Link href="/tools/AgentsFlow" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
+                  <Link href="/tools/agentsflow" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">
                     AgentsFlow
                   </Link>
                   <Link href="/tools/docx" className="block pl-4 text-white hover:text-[#0080FF] transition-colors">

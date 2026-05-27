@@ -14,7 +14,7 @@ const OperationalChecklist = () => {
           <div className="flex items-center space-x-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-white">AgentsFlow.com</Link>
             <span>/</span>
-            <Link href="/services/managed-services" className="hover:text-white">Managed Services</Link>
+            <Link href="/managed-services" className="hover:text-white">Managed Services</Link>
             <span>/</span>
             <span className="text-[#F47F21]">Operational Checklist Management</span>
           </div>

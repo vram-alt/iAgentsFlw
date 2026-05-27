@@ -42,7 +42,7 @@ const CtaSection =()=>{
                   className="border-white text-white hover:bg-white hover:text-[#0A0F1A]"
                   asChild
                 >
-                  <Link href="/services/managed-services">View All Managed Services</Link>
+                  <Link href="/managed-services">View All Managed Services</Link>
                 </Button>
               </div>
             </CardContent>

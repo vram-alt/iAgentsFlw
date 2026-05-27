@@ -55,7 +55,7 @@ const AboutClient = () => {
     {
       name: 'AgentsFlow',
       description: 'Enterprise Apps & AI Governance platform for comprehensive visibility and control across your application ecosystem.',
-      link: '/tools/AgentsFlow',
+      link: '/tools/agentsflow',
       features: ['AI Usage Monitoring', 'Shadow AI Detection', 'Policy Enforcement', 'Risk Assessment']
     },
     {
@@ -67,7 +67,7 @@ const AboutClient = () => {
     {
       name: 'AgentsFlow',
       description: 'Production-safe AI agents for enterprise with built-in governance, compliance, and security controls.',
-      link: '/tools/AgentsFlow',
+      link: '/tools/agentsflow',
       features: ['AI Agent Orchestration', 'Safety Guardrails', 'Workflow Automation', 'Enterprise Integration']
     },
     {
@@ -588,7 +588,7 @@ const AboutClient = () => {
                 Get Started
               </Link>
               <Link
-                href="/tools/AgentsFlow"
+                href="/tools/agentsflow"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white/20 rounded-lg hover:border-[#F47F21] transition-all hover:scale-105"
               >
                 Explore Our Tools
