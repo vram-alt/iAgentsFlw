@@ -28,17 +28,36 @@ function getBlogPostImageUrl(image?: Image | { asset?: { _ref?: string; url?: st
 
 export async function generateMetadata(): Promise<Metadata> {
   const description = 'Insights, guides, and updates from AgentsFlow AI on AI governance, compliance, and secure enterprise AI operations.'
+  const pageTitle = 'AI Governance Blog — Insights & Best Practices'
+  const socialTitle = 'Blog — AI Governance Insights | AgentsFlow AI'
   const { data: posts } = await loadLatestPosts()
   const latestPost = Array.isArray(posts) ? posts.find((post) => post?.mainImage || post?.image) : undefined
   const imageUrl = getBlogPostImageUrl(latestPost?.mainImage) || getBlogPostImageUrl(latestPost?.image) || BLOG_OG_FALLBACK
 
-  return seoGenerateMetadata({
-    title: 'Blog',
+  const metadata = seoGenerateMetadata({
+    title: pageTitle,
     description,
     url: 'https://iagentsflow.com/blog',
     imageUrl,
     imageAlt: 'AgentsFlow AI blog insights',
   })
+
+  return {
+    ...metadata,
+    openGraph: {
+      ...metadata.openGraph,
+      title: socialTitle,
+      description,
+      url: 'https://iagentsflow.com/blog',
+    },
+    twitter: {
+      ...metadata.twitter,
+      card: 'summary_large_image',
+      title: socialTitle,
+      description,
+      images: [imageUrl],
+    },
+  }
 }
 
 const POSTS_PER_PAGE = 9

@@ -52,7 +52,6 @@ export const metadata: Metadata = {
     template: '%s | AgentsFlow AI',
   },
   description: 'AI governance platform with Azure guardrails that strengthens compliance, reduces risk, protects data, and ensures secure and responsible AI operations.',
-  keywords: ['AI governance', 'compliance', 'Azure guardrails', 'enterprise AI', 'AI compliance'],
   authors: [{ name: 'AgentsFlow AI' }],
   creator: 'AgentsFlow AI',
   publisher: 'AgentsFlow AI',
