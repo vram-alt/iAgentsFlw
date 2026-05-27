@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return seoGenerateMetadata({
-    title: 'iPrivacyHub - AI Enterprise Privacy Platform | AgentsFlow AI',
+    title: 'iPrivacyHub - AI Enterprise Privacy Platform',
     description: 'AI enterprise privacy platform for comprehensive data protection and privacy compliance management.',
     url: pageUrl,
   })

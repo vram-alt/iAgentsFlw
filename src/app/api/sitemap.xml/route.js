@@ -6,8 +6,9 @@ const SITE_URL = `https://iagentsflow.com`; // Change this to your actual domain
 function normalizeSitemapUrl(url) {
   if (!url) return null;
 
-  const normalized = url.replace(/\/+$/, "");
-  return normalized === SITE_URL ? `${SITE_URL}/` : normalized;
+  //const normalized = url.replace(/\/+$/, "");
+  //return normalized === SITE_URL ? `${SITE_URL}/` : normalized;
+  return url.replace(/\/+$/, "");
 }
 
 function dedupeSitemapEntries(entries) {
@@ -28,7 +29,7 @@ function dedupeSitemapEntries(entries) {
 }
 
 const query = groq`
-  *[_type in ["page", "post", "job"] && (!defined(isActive) || isActive == true)] {
+  *[_type in ["post", "job"] && (!defined(isActive) || isActive == true)] {
     "slug": slug.current,
     _type,
     _updatedAt
@@ -43,7 +44,7 @@ export async function GET() {
 
     // Define static pages
     const staticPages = [
-      { url: `${SITE_URL}/` },
+      { url: `${SITE_URL}` },
       { url: `${SITE_URL}/about` },
       { url: `${SITE_URL}/contact` },
       { url: `${SITE_URL}/blog` },
@@ -92,7 +93,7 @@ export async function GET() {
     const dynamicPages = sortedItems
     .map((item) => {
       if (!item.slug) return null;
-      if (item._type === "page" && ["home", "tools"].includes(item.slug)) return null;
+      //if (item._type === "page" && ["home", "tools"].includes(item.slug)) return null;
 
       let path = null;
       //if (item._type === "page") path = item.slug;

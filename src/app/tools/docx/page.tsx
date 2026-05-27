@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return seoGenerateMetadata({
-    title: 'DocX.AI - Enterprise Document Intelligence Platform | AgentsFlow AI',
+    title: 'DocX.AI - Enterprise Document Intelligence Platform',
     description: 'Enterprise document intelligence platform powered by AI for automated processing and analysis.',
     url: pageUrl,
   })

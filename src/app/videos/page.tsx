@@ -1,6 +1,14 @@
 import React from 'react';
+import { Metadata } from 'next';
 import YouTubeVideoGrid from '@/components/YouTubeVideoGrid';
 import { loadAllYouTubeVideos, loadAllYouTubeVideoCategories } from '@/sanity/loader/loadQuery';
+
+export const metadata: Metadata = {
+  title: 'AI Governance Videos & Demos | AgentsFlow AI',
+  description: 'Watch AgentsFlow AI demos, webinars, and governance tutorials.',
+  alternates: { canonical: 'https://iagentsflow.com/videos' },
+  robots: { index: false, follow: false },  // noindex until ready
+}
 
 const Videos = async () => {
     const { data: videos } = await loadAllYouTubeVideos();

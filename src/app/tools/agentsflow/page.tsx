@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return seoGenerateMetadata({
-    title: 'AgentsFlow - Enterprise Apps & AI Governance Platform | AgentsFlow AI',
+    title: 'AgentsFlow - Enterprise Apps & AI Governance Platform',
     description: 'Enterprise Apps & AI Governance platform for comprehensive visibility and control across your application ecosystem.',
     url: pageUrl,
   })

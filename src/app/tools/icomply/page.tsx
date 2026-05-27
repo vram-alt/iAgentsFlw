@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return seoGenerateMetadata({
-    title: 'iComply - Intelligent Compliance Automation Platform | AgentsFlow AI',
+    title: 'iComply - Intelligent Compliance Automation Platform',
     description: 'Intelligent compliance automation platform that transforms complex regulatory requirements into streamlined processes.',
     url: pageUrl,
   })
