@@ -18,7 +18,7 @@ export const urlForImage = (source: Image | undefined) => {
 }
 
 export function urlForOpenGraphImage(image: Image | undefined) {
-  return urlForImage(image)?.width(1200).height(627).fit('crop').url()
+  return urlForImage(image)?.width(1200).height(630).fit('crop').url()
 }
 
 export function resolveHref(

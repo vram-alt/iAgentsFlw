@@ -26,6 +26,26 @@ function normalizePageTitle(title?: string): string | undefined {
   return normalized || title;
 }
 
+function normalizeOpenGraphImageUrl(imageUrl: string, width: number, height: number): string {
+  if (!imageUrl) return imageUrl;
+
+  try {
+    const url = new URL(imageUrl);
+
+    if (url.hostname === "cdn.sanity.io" && url.pathname.startsWith("/images/")) {
+      url.searchParams.set("w", String(width));
+      url.searchParams.set("h", String(height));
+      url.searchParams.set("fit", "crop");
+      url.searchParams.set("auto", "format");
+      return url.toString();
+    }
+  } catch {
+    return imageUrl;
+  }
+
+  return imageUrl;
+}
+
 export function seoGenerateMetadata({
   title,
   description,
@@ -44,9 +64,9 @@ export function seoGenerateMetadata({
   const pageTitle = normalizePageTitle(title);
   
   if (imageUrl) {
-    metaImageurl = imageUrl;
+    metaImageurl = normalizeOpenGraphImageUrl(imageUrl, imageWidth, imageHeight);
   } else if (image) {
-    metaImageurl = image;
+    metaImageurl = normalizeOpenGraphImageUrl(image, imageWidth, imageHeight);
   }
 
   // Build images array for OpenGraph

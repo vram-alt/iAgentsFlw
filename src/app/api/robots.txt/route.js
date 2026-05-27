@@ -13,12 +13,14 @@ Disallow: /
     `.trim()
     : `
 User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /studio/
 Disallow: /admin/studio/
 Disallow: /drafts/
 Disallow: /preview/
-Disallow: /api/
 Disallow: /internal/
-Allow: /
 
 Sitemap: ${SITE_URL}/sitemap.xml
     `.trim();

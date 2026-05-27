@@ -2,38 +2,43 @@ import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { loadLatestPosts } from '@/sanity/loader/loadQuery'
+import { urlForOpenGraphImage } from '@/sanity/lib/utils'
 import { Card, CardHeader } from '@/components/ui/card'
+import { seoGenerateMetadata } from '@/components/Seo'
 import BlogPagination from './BlogPagination'
 import BlogHero from './BlogHero'
 import type { Image } from 'sanity'
 
-export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'Insights, guides, and updates from AgentsFlow AI on AI governance, compliance, and secure enterprise AI operations.',
-  alternates: {
-    canonical: 'https://iagentsflow.com/blog',
-  },
-  openGraph: {
-    title: 'Blog | AgentsFlow AI',
-    description: 'Insights, guides, and updates from AgentsFlow AI on AI governance, compliance, and secure enterprise AI operations.',
+const BLOG_OG_FALLBACK = 'https://iagentsflow.com/blog/opengraph-image'
+
+function getBlogPostImageUrl(image?: Image | { asset?: { _ref?: string; url?: string }; url?: string }) {
+  if (!image) return undefined
+
+  const sanityImageUrl = urlForOpenGraphImage(image as Image)
+  if (sanityImageUrl) return sanityImageUrl
+
+  if ('url' in image && image.url) return String(image.url)
+  if ('asset' in image) {
+    const asset = image.asset as { url?: string } | undefined
+    if (asset?.url) return asset.url
+  }
+
+  return undefined
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const description = 'Insights, guides, and updates from AgentsFlow AI on AI governance, compliance, and secure enterprise AI operations.'
+  const { data: posts } = await loadLatestPosts()
+  const latestPost = Array.isArray(posts) ? posts.find((post) => post?.mainImage || post?.image) : undefined
+  const imageUrl = getBlogPostImageUrl(latestPost?.mainImage) || getBlogPostImageUrl(latestPost?.image) || BLOG_OG_FALLBACK
+
+  return seoGenerateMetadata({
+    title: 'Blog',
+    description,
     url: 'https://iagentsflow.com/blog',
-    siteName: 'AgentsFlow AI',
-    type: 'website',
-    images: [
-      {
-        url: '/AgentsFlow-logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'AgentsFlow AI',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Blog | AgentsFlow AI',
-    description: 'Insights, guides, and updates from AgentsFlow AI on AI governance, compliance, and secure enterprise AI operations.',
-    images: ['/AgentsFlow-logo.png'],
-  },
+    imageUrl,
+    imageAlt: 'AgentsFlow AI blog insights',
+  })
 }
 
 const POSTS_PER_PAGE = 9
