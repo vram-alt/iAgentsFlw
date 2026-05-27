@@ -1,6 +1,16 @@
-/tools/AgentsFlow /tools/agentsflow 301!
+# WWW to non-WWW
 https://www.iagentsflow.com/* https://iagentsflow.com/:splat 301!
-/tools /tools/agentsflow 301!
-/managed-services /managed-services/spend-management 301!
-/home / 301!
 
+# Home redirects
+/home / 301!
+/home/ / 301!
+
+# Tools redirects
+/tools /tools/agentsflow 301!
+/tools/ /tools/agentsflow 301!
+/tools/AgentsFlow /tools/agentsflow 301!
+/tools/AgentsFlow/ /tools/agentsflow 301!
+
+# Managed Services
+/managed-services /managed-services/spend-management 301!
+/managed-services/ /managed-services/spend-management 301!
