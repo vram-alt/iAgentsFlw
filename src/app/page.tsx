@@ -5,6 +5,7 @@ import { seoGenerateMetadata } from '@/components/Seo'
 import { loadPage } from '@/sanity/loader/loadQuery'
 
 const siteUrl = getSiteUrl()
+const homeOgImageAlt = 'AgentsFlow AI platform dashboard showing AI governance metrics'
 
 export async function generateMetadata(): Promise<Metadata> {
   const pageUrl = `${siteUrl}/`
@@ -19,7 +20,8 @@ export async function generateMetadata(): Promise<Metadata> {
       title: page?.seo?.metaTitle || '',
       description: page?.seo?.metaDescription || '',
       url: pageUrl,
-      imageUrl: page?.seo?.metaImage || ''
+      imageUrl: page?.seo?.metaImage || '',
+      imageAlt: homeOgImageAlt,
     })
   }
 
@@ -32,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
     locale: 'en_US',
     imageWidth: 1200,
     imageHeight: 630,
-    imageAlt: 'AgentsFlow AI',
+    imageAlt: homeOgImageAlt,
   })
 }
 
