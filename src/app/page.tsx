@@ -19,15 +19,13 @@ export async function generateMetadata(): Promise<Metadata> {
       title: page?.seo?.metaTitle || '',
       description: page?.seo?.metaDescription || '',
       url: pageUrl,
-      imageUrl: page?.seo?.metaImage || '',
-      keywords: keywordsArray,
+      imageUrl: page?.seo?.metaImage || ''
     })
   }
 
   return seoGenerateMetadata({
     title: 'ATrusted partner, Enterprise AI Governance & Responsible AI| Gaurdrails Management | Agents Change Management | Observability |Security & Data privacy',
     description: 'AI governance platform with Guardrails that strengthens compliance, reduces risk, protects data, and ensures secure and responsible AI operations.',
-    keywords: ['azure guardrails', 'AI governance', 'compliance', 'enterprise AI'],
     url: pageUrl,
     imageUrl: '/AgentsFlow-logo.png',
     siteName: 'AgentsFlow AI',

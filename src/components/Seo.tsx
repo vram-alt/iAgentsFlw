@@ -82,7 +82,7 @@ export function seoGenerateMetadata({
   const metadata: Metadata = {
     title: pageTitle,
     description,
-    ...(keywords && { keywords }),
+    //...(keywords && { keywords }),
     alternates: {
       ...(url && { canonical: url }),
     },
