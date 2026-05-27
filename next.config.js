@@ -17,11 +17,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/tools/AgentsFlow',
-        destination: '/tools/agentsflow',
-        permanent: true,
-      },
-      {
         source: '/managed-services',
         destination: '/managed-services/spend-management',
         permanent: true,
