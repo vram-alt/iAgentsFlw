@@ -15,15 +15,15 @@ const CrossSellBannerSection = () => {
     
     return (
         <>
-            <section className="py-8 sm:py-10 md:py-12 bg-gradient-to-r from-[#F47F21]/10 to-[#FF6B35]/10 border-y border-[#F47F21]/20">
+            <section className="border-y border-[#F47F21]/20 bg-gradient-to-r from-[#F47F21]/10 to-[#FF6B35]/10 py-8 sm:py-10 md:py-12">
                 <div className="container mx-auto px-4 sm:px-6">
-                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start sm:items-center justify-between">
+                    <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-6">
                         <div>
-                            <h3 className="text-lg sm:text-xl font-bold mb-2">Need AI Governance for Your Models & Agents?</h3>
-                            <p className="text-sm sm:text-base text-gray-300">Complete your compliance with AgentsFlow—real-time AI system tracking for automated evidence generation</p>
+                            <h3 className="mb-2 text-lg font-bold sm:text-xl">Need AI Governance for Your Models & Agents?</h3>
+                            <p className="text-sm text-gray-300 sm:text-base">Complete your compliance with AgentsFlow—real-time AI system tracking for automated evidence generation</p>
                         </div>
-                        <Link href="/tools/AgentsFlow" className="w-full sm:w-auto">
-                            <Button className="w-full sm:w-auto bg-[#F47F21] hover:bg-[#F47F21]/90 text-white">
+                        <Link href="/tools/agentsflow" className="w-full sm:w-auto">
+                            <Button className="w-full bg-[#F47F21] text-white hover:bg-[#F47F21]/90 sm:w-auto">
                                 Explore AgentsFlow →
                             </Button>
                         </Link>

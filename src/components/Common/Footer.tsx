@@ -26,8 +26,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-muted-foreground sm:text-base">
               <li><Link href="/tools/agentsflow" className="transition-colors hover:text-foreground">AgentsFlow</Link></li>
               <li><Link href="/tools/icomply" className="transition-colors hover:text-foreground">iComply</Link></li>
-              {/* <li><Link href="/tools/AgentsFlow" className="transition-colors hover:text-foreground">AgentsFlow</Link></li>
-              <li><Link href="/tools/docx" className="transition-colors hover:text-foreground">DocX.AI</Link></li>
+             <li><Link href="/tools/docx" className="transition-colors hover:text-foreground">DocX.AI</Link></li>
               <li><Link href="/tools/iprivacyhub" className="transition-colors hover:text-foreground">iPrivacyHub</Link></li> */}
             </ul>
           </div>
