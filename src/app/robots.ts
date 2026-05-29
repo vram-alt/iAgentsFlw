@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/studio/', '/admin/studio/', '/drafts/', '/preview/', '/internal/'],
+        disallow: ['/api/', '/studio/', '/admin/studio/', '/drafts/', '/preview/', '/internal/'],
       },
     ],
     sitemap: `https://iagentsflow.com/sitemap.xml`,
