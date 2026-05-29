@@ -1,5 +1,7 @@
 # WWW to non-WWW
 https://www.iagentsflow.com/* https://iagentsflow.com/:splat 301!
+http://www.iagentsflow.com/* https://iagentsflow.com/:splat 301!
+http://iagentsflow.com/* https://iagentsflow.com/:splat 301!
 
 # Home redirects
 /home / 301!

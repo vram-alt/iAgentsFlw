@@ -15,7 +15,6 @@ Disallow: /
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_next/
 Disallow: /studio/
 Disallow: /admin/studio/
 Disallow: /drafts/
