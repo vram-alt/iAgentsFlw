@@ -79,6 +79,26 @@ export default defineType({
           .error('YouTube video ID must be exactly 11 characters'),
     }),
     defineField({
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime',
+      description: 'Date the video was published on YouTube',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'duration',
+      title: 'Duration',
+      type: 'string',
+      description: 'ISO 8601 duration (e.g. PT3M45S)',
+      validation: (Rule) => Rule.max(20).warning('Use ISO 8601 duration notation, e.g. PT3M45S'),
+    }),
+    defineField({
+      name: 'thumbnailUrl',
+      title: 'Thumbnail URL',
+      type: 'url',
+      description: 'Optional thumbnail image URL. If blank, the YouTube default thumbnail is used.',
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'text',
