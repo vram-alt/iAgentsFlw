@@ -26,14 +26,12 @@ const organizationSchema = {
     {
       '@type': 'Organization',
       '@id': `${siteUrl}/#organization`,
-      name: 'AgentsFlow AI',
+      name: 'AgentsFlow',
+      alternateName: ['iAgentsFlow', 'AgentsFlow AI', 'AigentsFlow'],
       url: `${siteUrl}/`,
       logo: `${siteUrl}/images/logo.webp`,
       sameAs: [
-        'https://www.linkedin.com/company/iagentsflow',
-        'https://x.com/iAgentsFlow',
         'https://www.youtube.com/@AigentsFlow',
-        'https://www.facebook.com/profile.php?id=61586195077581',
       ],
     },
     {
