@@ -123,10 +123,8 @@ export default function RootLayout({
             gtag('config', 'G-M0NYL8WEQN');
           `}
         </Script>
-        <Script
-          id="organization-schema"
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <Providers>
