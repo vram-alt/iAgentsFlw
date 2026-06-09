@@ -109,8 +109,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
-      <body className="min-h-screen bg-[#0A0F1A] text-white antialiased">
-      <meta name="google-site-verification" content="google92184f902c0fcca1"/>
+      <head>
+        <meta name="google-site-verification" content="google92184f902c0fcca1"/>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-M0NYL8WEQN"
           strategy="afterInteractive"
@@ -127,6 +127,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+      </head>
+      <body className="min-h-screen bg-[#0A0F1A] text-white antialiased">
+      
         <Providers>
           <Header />
           <main className="pt-18">
