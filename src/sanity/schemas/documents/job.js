@@ -40,16 +40,6 @@ export default defineType({
         rule.required().max(180),
     }),
     defineField({
-        name: 'datePosted',
-        title: 'Date Posted',
-        type: 'date',
-        options: {
-          dateFormat: 'MMMM D, YYYY',
-        },
-        initialValue: () => new Date().toISOString().split('T')[0],
-        validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'team',
       title: 'Department / Team',
       type: 'string',
