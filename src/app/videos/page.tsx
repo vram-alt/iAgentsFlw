@@ -6,8 +6,7 @@ import { loadAllYouTubeVideos, loadAllYouTubeVideoCategories } from '@/sanity/lo
 export const metadata: Metadata = {
   title: 'AI Governance Videos & Demos | AgentsFlow AI',
   description: 'Watch AgentsFlow AI demos, webinars, and governance tutorials.',
-  alternates: { canonical: 'https://iagentsflow.com/videos' },
-  robots: { index: false, follow: false },  // noindex until ready
+  alternates: { canonical: 'https://iagentsflow.com/videos' }
 }
 
 const Videos = async () => {
