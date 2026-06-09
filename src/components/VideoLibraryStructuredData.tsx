@@ -36,6 +36,7 @@ const VideoLibraryStructuredData = ({ videos }: VideoLibraryStructuredDataProps)
       const videoUrl = `https://www.youtube.com/watch?v=${video.youtubeId}`
       const thumbnailUrl =
         video.thumbnailUrl || `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`
+      const uploadDate = getIsoDate(video.publishedAt) || new Date().toISOString().split('T')[0]
 
       return {
         '@type': 'ListItem',
@@ -47,7 +48,8 @@ const VideoLibraryStructuredData = ({ videos }: VideoLibraryStructuredDataProps)
           alternateName: video.title,
           description: video.description || 'AgentsFlow AI video',
           thumbnailUrl,
-          uploadDate: getIsoDate(video.publishedAt),
+          uploadDate,
+          datePublished: uploadDate,
           duration: video.duration,
           contentUrl: videoUrl,
           embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
