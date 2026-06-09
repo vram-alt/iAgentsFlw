@@ -22,6 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: pageUrl,
       imageUrl: page?.seo?.metaImage || '',
       keywords: keywordsArray,
+      tags: ['servicenow-ai-control-tower-implementation'],
     })
   }
 

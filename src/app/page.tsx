@@ -22,6 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: pageUrl,
       imageUrl: page?.seo?.metaImage || '',
       imageAlt: homeOgImageAlt,
+      tags: ['servicenow-ai-control-tower-implementation'],
     })
   }
 
@@ -33,6 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
     siteName: 'AgentsFlow AI',
     locale: 'en_US',
     imageWidth: 1200,
+    tags: ['servicenow-ai-control-tower-implementation'],
     imageHeight: 630,
     imageAlt: homeOgImageAlt,
   })

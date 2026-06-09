@@ -143,7 +143,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = jobData.seo?.metaTitle ?? (jobData.title ? `${jobData.title} - Careers - AgentsFlow AI` : 'Careers - AgentsFlow AI')
   const description = jobData.seo?.metaDescription ?? `Join AgentsFlow AI as a ${jobData.title || 'team member'}. ${jobData.location ? `Location: ${jobData.location}` : ''}`
 
-  return seoGenerateMetadata({ title, description, url: pageUrl })
+  return seoGenerateMetadata({ title, description, url: pageUrl, tags: ['servicenow-ai-control-tower-implementation'] })
 }
 
 export default async function JobDetailPage({ params }: { params: Promise<{ slug: string }> }) {

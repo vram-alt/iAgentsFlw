@@ -40,6 +40,7 @@ export async function generateMetadata(): Promise<Metadata> {
     url: 'https://iagentsflow.com/blog',
     imageUrl,
     imageAlt: 'AgentsFlow AI blog insights',
+    tags: ['servicenow-ai-control-tower-implementation'],
   })
 
   return {

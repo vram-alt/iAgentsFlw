@@ -29,6 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: '404 - Page Not Found',
     description: 'The page you are looking for does not exist.',
     url: pageUrl,
+    tags: ['servicenow-ai-control-tower-implementation'],
   })
 }
 

@@ -12,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Terms of Use - AgentsFlow AI',
     description: 'Terms of Use for AgentsFlow AI. Read our terms and conditions for using our services.',
     url: pageUrl,
+    tags: ['servicenow-ai-control-tower-implementation'],
   })
 }
 

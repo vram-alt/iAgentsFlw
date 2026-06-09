@@ -7,6 +7,7 @@ import { loadAllYouTubeVideos, loadAllYouTubeVideoCategories } from '@/sanity/lo
 export const metadata: Metadata = {
   title: 'AI Governance Videos & Demos | AgentsFlow AI',
   description: 'Watch AgentsFlow AI demos, webinars, and governance tutorials.',
+  keywords: ['servicenow-ai-control-tower-implementation'],
   alternates: { canonical: 'https://iagentsflow.com/videos' },
   robots: {
     index: true,

@@ -15,6 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Careers - AgentsFlow AI',
     description: 'Join AgentsFlow AI and help organizations effectively and efficiently comply with global privacy and security regulations. Build a diverse, connected team with meaningful work.',
     url: pageUrl,
+    tags: ['servicenow-ai-control-tower-implementation'],
   })
 }
 

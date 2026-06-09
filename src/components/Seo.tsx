@@ -8,6 +8,7 @@ interface SeoProps {
   url?: string;
   imageUrl?: string;
   keywords?: string[];
+  tags?: string[];
   siteName?: string;
   locale?: string;
   imageWidth?: number;
@@ -53,6 +54,7 @@ export function seoGenerateMetadata({
   imageUrl,
   image,
   keywords,
+  tags,
   siteName = "AgentsFlow AI",
   locale = "en_US",
   imageWidth = 1200,
@@ -83,6 +85,7 @@ export function seoGenerateMetadata({
     title: pageTitle,
     description,
     //...(keywords && { keywords }),
+    ...(tags && { keywords: tags }),
     alternates: {
       ...(url && { canonical: url }),
     },

@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title,
   description,
   keywords: [
+    'servicenow-ai-control-tower-implementation',
     'AI governance',
     'AI control plane',
     'enterprise AI compliance',

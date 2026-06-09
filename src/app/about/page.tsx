@@ -22,6 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url: pageUrl,
       imageUrl: page?.seo?.metaImage || '',
       keywords: keywordsArray,
+      tags: ['servicenow-ai-control-tower-implementation'],
     })
   }
 
@@ -29,6 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'About Us - AgentsFlow AI',
     description: 'Learn about AgentsFlow AI, our mission, values, and the team behind enterprise AI governance solutions.',
     url: pageUrl,
+    tags: ['servicenow-ai-control-tower-implementation'],
   })
 }
 

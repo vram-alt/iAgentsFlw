@@ -11,8 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return seoGenerateMetadata({
     title: 'Privacy Policy - AgentsFlow AI',
     description: 'Privacy Policy for AgentsFlow AI. Learn how we collect, use, and protect your personal information.',
-    url: pageUrl,
-  })
+    url: pageUrl,    tags: ['servicenow-ai-control-tower-implementation'],  })
 }
 
 export default function PrivacyPolicyPage() {

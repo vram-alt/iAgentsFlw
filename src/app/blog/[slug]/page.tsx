@@ -59,6 +59,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     url: pageUrl,
     imageUrl,
     imageAlt: title,
+    tags: ['servicenow-ai-control-tower-implementation'],
   })
 }
 
