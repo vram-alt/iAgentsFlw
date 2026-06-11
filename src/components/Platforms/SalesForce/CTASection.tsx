@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ContactFormModal from '@/components/ContactFormModal';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link'
 import {
     ArrowRight
 } from 'lucide-react';
@@ -27,9 +28,8 @@ const CTASection = () => {
                             <Button
                                 size="lg"
                                 className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
-                                onClick={() => setContactModalOpen(true)}
                             >
-                                Schedule Demo
+                                <Link href="/contact">Schedule Demo</Link>
                                 <ArrowRight className="ml-2 w-4 h-4" />
                             </Button>
                         </CardContent>

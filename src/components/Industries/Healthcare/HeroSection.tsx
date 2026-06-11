@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { useState } from "react"
+import Link from 'next/link'
 
 const HeroSection = () => {
     const [contactModalOpen, setContactModalOpen] = useState(false);
@@ -38,9 +39,8 @@ const HeroSection = () => {
                         <Button
                             size="lg"
                             className="bg-[#F47F21] text-white hover:bg-[#F47F21]/90"
-                            onClick={() => setContactModalOpen(true)}
                         >
-                            Schedule Consultation
+                            <Link href="/contact">Schedule Consultation</Link>
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </div>

@@ -50,14 +50,13 @@ const HeroSection =()=>{
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <Button 
-                size="lg" 
-                className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
-                onClick={() => setContactModalOpen(true)}
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <Link href="/contact"
+                            className="inline-flex items-center justify-center gap-2  h-11 rounded-2xl font-medium px-8 py-4 text-base bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
+                   
+                        >
+                            Get Started
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
               <Button 
                 size="lg" 
                 variant="outline"

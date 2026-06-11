@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import {
     ArrowRight,
 } from 'lucide-react';
+import Link from 'next/link'
 
 const CtaSection = () => {
     const [contactModalOpen, setContactModalOpen] = useState(false);
@@ -20,9 +21,8 @@ const CtaSection = () => {
                         <Button
                             size="lg"
                             className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
-                            onClick={() => setContactModalOpen(true)}
                         >
-                            Get Free Cost Analysis
+                            <Link href="/contact">Get Free Cost Analysis</Link>
                             <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
                     </CardContent>

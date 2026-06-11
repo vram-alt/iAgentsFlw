@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link'
 
 const CtaSection = () => {
     const [contactModalOpen, setContactModalOpen] = useState(false);
@@ -20,7 +21,7 @@ const CtaSection = () => {
                             className="bg-[#F47F21] text-white hover:bg-[#F47F21]/90"
                             onClick={() => setContactModalOpen(true)}
                         >
-                            Schedule Consultation
+                            <Link href="/contact">Schedule Consultation</Link>
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </CardContent>

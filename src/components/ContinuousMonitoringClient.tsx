@@ -69,14 +69,13 @@ const ContinuousMonitoringClient = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center pt-4">
-              <Button 
-                size="lg" 
+              <Link href="/contact"
                 className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
                 onClick={() => setContactModalOpen(true)}
               >
-                Get Started
+                Get Started 5
                 <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              </Link>
             </div>
           </motion.div>
         </div>

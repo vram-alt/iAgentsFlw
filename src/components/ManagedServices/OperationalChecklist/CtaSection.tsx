@@ -45,7 +45,7 @@ const CtaSection =()=>{
                 className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
                 onClick={() => setContactModalOpen(true)}
               >
-                Schedule Consultation
+                <Link href="/contact">Schedule Consultation</Link>
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </CardContent>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import Link from 'next/link'
 import { 
   ArrowRight,
 } from 'lucide-react';
@@ -39,9 +40,8 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
-                onClick={() => setContactModalOpen(true)}
               >
-                Get Started
+                 <Link href="/contact">Get Started</Link>
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>

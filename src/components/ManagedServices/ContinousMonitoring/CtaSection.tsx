@@ -5,6 +5,7 @@ import {
     ArrowRight,
 } from 'lucide-react';
 import { useState } from 'react';
+import Link from 'next/link'
 
 
 const CtaSection = () => {
@@ -18,14 +19,13 @@ const CtaSection = () => {
                         <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                             Let our experts monitor your AI systems 24/7 so you can innovate with confidence
                         </p>
-                        <Button
-                            size="lg"
-                            className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
-                            onClick={() => setContactModalOpen(true)}
+                        <Link href="/contact"
+                            className="inline-flex items-center justify-center gap-2  h-11 rounded-2xl font-medium px-8 py-4 text-lg bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
+                   
                         >
-                            Schedule Consultation
+                            Get Started
                             <ArrowRight className="ml-2 w-4 h-4" />
-                        </Button>
+                        </Link>
                     </CardContent>
                 </Card>
             </div>

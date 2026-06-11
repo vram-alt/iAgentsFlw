@@ -71,9 +71,8 @@ const AuditReadiness = () => {
               <Button 
                 size="lg" 
                 className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
-                onClick={() => setContactModalOpen(true)}
               >
-                Get Started
+                <Link href="/contact">Get Started</Link>
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
@@ -452,9 +451,8 @@ const AuditReadiness = () => {
               <Button 
                 size="lg" 
                 className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
-                onClick={() => setContactModalOpen(true)}
               >
-                Get Audit Readiness Assessment
+                <Link href="/contact">Get Audit Readiness Assessment</Link>
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </CardContent>

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {  ArrowRight } from 'lucide-react';
-
+import Link from 'next/link'
 
 
 
@@ -33,9 +33,8 @@ const CtaSection =()=>{
             <Button 
               size="lg" 
               className="bg-brand-2 hover:bg-brand-2/90 text-white px-8 py-4 text-lg"
-              onClick={() => setContactModalOpen(true)}
             >
-              Schedule Consultation
+              <Link href="/contact">Schedule Consultation</Link>
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </motion.div>

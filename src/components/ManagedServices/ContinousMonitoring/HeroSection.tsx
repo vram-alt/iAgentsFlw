@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { 
-  ArrowRight,
+import Link from 'next/link'
+import {
+    ArrowRight,
 } from 'lucide-react';
 
 const HeroSection = () => {
@@ -36,14 +37,13 @@ const HeroSection = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4 justify-center pt-4">
-                        <Button
-                            size="lg"
-                            className="bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
-                            onClick={() => setContactModalOpen(true)}
+                        <Link href="/contact"
+                            className="inline-flex items-center justify-center gap-2  h-11 rounded-2xl font-medium px-8 py-4 text-lg bg-[#F47F21] hover:bg-[#F47F21]/90 text-white"
+                    
                         >
-                            Get Started
+                            <Link href="/contact">Get Started</Link>
                             <ArrowRight className="ml-2 w-4 h-4" />
-                        </Button>
+                        </Link>
                     </div>
                 </motion.div>
             </div>
