@@ -161,6 +161,9 @@ export default async function JobDetailPage({ params }: { params: Promise<{ slug
       : jobData.applyUrl
     : 'mailto:jobs1@iagentsflow.com'
 
+
+  console.log('applyHref',applyHref)
+
   const postedDate = jobData.datePosted
     ? new Date(jobData.datePosted).toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })
     : null
