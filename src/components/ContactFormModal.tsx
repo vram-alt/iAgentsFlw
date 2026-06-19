@@ -33,7 +33,6 @@ const ContactFormModal = ({ isOpen, onClose, serviceType = null }: ContactFormMo
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: Implement form submission logic
-    console.log('Contact form submitted:', formData);
     setIsSubmitted(true);
   };
 

@@ -123,7 +123,6 @@ const ROIEstimator = () => {
       timestamp: new Date().toISOString()
     };
     
-    console.log('ROI Report Data:', reportData);
     
     // Note: Report generated (toast notification removed)
     

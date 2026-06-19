@@ -48,7 +48,6 @@ const workModeLabels: Record<string, string> = {
 
 async function JobListings() {
   const { data: jobs } = await loadAllJobs()
-  console.log('Loaded jobs:', jobs)
 
   if (!jobs || !Array.isArray(jobs) || jobs.length === 0) {
     return (
