@@ -234,7 +234,7 @@ export default async function JobDetailPage({ params }: { params: Promise<{ slug
                 className="bg-[#F47F21] hover:bg-[#E06F1A] text-white font-medium px-8 py-6 text-lg rounded-lg shadow-lg transition-colors"
               >
                 <a href={`mailto:jobs1@iagentsflow.com`} target="_blank" rel="noopener noreferrer">
-                  Apply For This Job 1
+                  Apply For This Job
                 </a>
               </Button>
             </div>
@@ -321,7 +321,7 @@ export default async function JobDetailPage({ params }: { params: Promise<{ slug
                 className="bg-[#F47F21] hover:bg-[#E06F1A] text-white font-medium px-8 py-6 text-lg rounded-lg shadow-lg transition-colors"
               >
                 <a href={`mailto:jobs1@iagentsflow.com`} target="_blank" rel="noopener noreferrer">
-                  Apply For This Job 2
+                  Apply For This Job
                 </a>
               </Button>
             </div>
